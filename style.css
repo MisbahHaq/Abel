@@ -415,5 +415,6 @@ body {
 @media (max-width: 768px) {
     .mid-text .right {
         padding: 0 1rem;
+        font-size: 10px;
     }
 }
