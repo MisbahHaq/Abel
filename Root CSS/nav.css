@@ -41,11 +41,16 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
 }
 
 .nav-left {
-    margin-left: 3rem;
+    margin-left: 2rem;
+}
+
+.nav-right {
+    margin-right: 2rem;
 }
 
 .nav-link {
