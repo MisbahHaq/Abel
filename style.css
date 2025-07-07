@@ -402,3 +402,59 @@ body {
 .product-card:nth-child(3) {
     animation-delay: 0.3s;
 }
+
+.quick-add-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Initial state: show Quick Add button */
+.quick-add-btn {
+    padding: 0.6rem 1rem;
+
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Hidden by default */
+.quick-add-options {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.option-btn {
+    flex: 1;
+    padding: 0.5rem 0;
+    background: white;
+    border: 1px solid black;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background-color: #f3f3f3;
+}
+
+/* On hover: hide quick-add-btn, show options */
+.quick-add-wrapper:hover .quick-add-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quick-add-wrapper:hover .quick-add-options {
+    opacity: 1;
+    pointer-events: auto;
+}
