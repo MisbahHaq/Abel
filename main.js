@@ -58,7 +58,37 @@ const products = [
         img1: "./Images/bg5.webp",
         img2: "./Images/bg-bottle5.webp",
         badge: ""
-    }
+    },
+    {
+        id: "CYAN NORI MINI",
+        name: "CYAN NORI MINI",
+        description: "A Sweet, Salty Musk",
+        price: "€30",
+        category: "minis",
+        img1: "./Images/bg4.webp",
+        img2: "./Images/bg-bottle6.webp",
+        badge: "BEST SELLER"
+    },
+    {
+        id: "GREEN CEDAR MINI",
+        name: "GREEN CEDAR MINI",
+        description: "A Velvety, Rich Wood",
+        price: "€30",
+        category: "minis",
+        img1: "./Images/bg6.webp",
+        img2: "./Images/bg-bottle7.webp",
+        badge: "BEST SELLER"
+    },
+    {
+        id: "LAUNDRY DAY MINI",
+        name: "LAUNDRY DAY MINI",
+        description: "A Verdant, Sun-Filled Citrus",
+        price: "€30",
+        category: "minis",
+        img1: "./Images/bg7.webp",
+        img2: "./Images/bg-bottle8.webp",
+        badge: "BEST SELLER"
+    },
 ];
 
 
