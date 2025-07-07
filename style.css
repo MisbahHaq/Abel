@@ -1,3 +1,6 @@
+/* ------------------------------
+   RESET & FONTS
+------------------------------ */
 * {
     padding: 0;
     margin: 0;
@@ -14,10 +17,16 @@
     src: url('./Gilroy-ExtraBold.otf');
 }
 
+/* ------------------------------
+     BASE STYLES
+  ------------------------------ */
 body {
     font-family: Gilroy, Arial, Helvetica, sans-serif;
 }
 
+/* ------------------------------
+     FIRST PAGE (HERO SECTION)
+  ------------------------------ */
 .first-page {
     position: relative;
     width: 100%;
@@ -69,7 +78,6 @@ body {
     line-height: 1.5;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    max-width: 100%;
 }
 
 .left-text button {
@@ -88,6 +96,9 @@ body {
     background-color: #f3f3f3;
 }
 
+/* ------------------------------
+     SECOND PAGE
+  ------------------------------ */
 .second-page {
     display: flex;
     width: 100%;
@@ -106,7 +117,6 @@ body {
 .box-row {
     display: flex;
     position: relative;
-    width: fit-content;
     width: 550px;
     height: 750px;
 }
@@ -123,13 +133,51 @@ body {
     left: 0;
 }
 
-/* Main Content */
+/* ------------------------------
+     MID SECTION (CATEGORY + SCROLL)
+  ------------------------------ */
 .main {
     padding: 4rem 0;
 }
 
-.mid-text h1 {
+.mid-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.mid-text h1,
+.discover-title {
     font-weight: normal;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.mid-text .right {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.mid-text .right::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.right h5 {
+    font-weight: normal;
+}
+
+#category-tabs h5.active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .category-scroll {
@@ -154,39 +202,13 @@ body {
     text-decoration: underline;
 }
 
-.mid-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-}
-
-.discover-title {
-    font-weight: normal;
-    font-size: 2rem;
-    text-align: center;
-}
-
-#category-tabs h5.active {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.mid-text .right {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.right h5 {
-    font-weight: normal;
-}
-
 .hero {
     text-align: center;
 }
 
+/* ------------------------------
+     PRODUCT GRID + CARDS
+  ------------------------------ */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -205,11 +227,24 @@ body {
     border-left: 0.2px solid black;
     border-right: none;
     border-top: none;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
+}
+
+.product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.3s;
 }
 
 .product-image {
@@ -240,13 +275,6 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     z-index: 10;
-}
-
-.product-badge.new {
-    color: white;
-}
-
-.product-badge.bestseller {
     color: white;
 }
 
@@ -277,18 +305,23 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* ------------------------------
+     QUICK ADD OPTIONS
+  ------------------------------ */
+.quick-add-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
 .quick-add-btn {
     width: 100%;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    border: 0.3px solid black;
-    color: var(--text-primary);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    padding: 0.6rem 1rem;
+    color: black;
+    border: 1px solid black;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 1px;
+    transition: opacity 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -316,59 +349,6 @@ body {
 
 .quick-add-btn:active {
     transform: translateY(0);
-}
-
-/* Notification */
-.notification {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background: var(--text-primary);
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    font-size: 0.9rem;
-}
-
-.notification.show {
-    transform: translateX(0);
-}
-
-.product-card {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.product-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.product-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.product-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.quick-add-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.quick-add-btn {
-    padding: 0.6rem 1rem;
-
-    color: black;
-    border: 1px solid black;
-    cursor: pointer;
-    width: 100%;
-    font-size: 0.9rem;
-    transition: opacity 0.3s ease;
 }
 
 .quick-add-options {
@@ -407,21 +387,31 @@ body {
     pointer-events: auto;
 }
 
-.mid-text .right {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE 10+ */
+/* ------------------------------
+     NOTIFICATION
+  ------------------------------ */
+.notification {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: var(--text-primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    font-size: 0.9rem;
 }
 
-.mid-text .right::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari, Opera */
+.notification.show {
+    transform: translateX(0);
 }
 
+/* ------------------------------
+     RESPONSIVE (MEDIA QUERIES)
+  ------------------------------ */
 @media (max-width: 768px) {
     .mid-text .right {
         padding: 0 1rem;
