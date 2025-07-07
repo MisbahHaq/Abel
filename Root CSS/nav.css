@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -5,6 +11,7 @@ body {
     background-color: #f9fafb;
 }
 
+/* Navigation Styles */
 .navbar {
     background-color: white;
     border-bottom: 1px solid #f3f4f6;
@@ -111,7 +118,6 @@ body {
     background-color: #f9fafb;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -119,19 +125,23 @@ body {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    gap: 0.25rem;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    color: rebeccapurple;
+    background-color: red;
 }
 
-.hamburger {
-    width: 24px;
-    height: 2px;
-    background-color: #374151;
-    transition: all 0.3s ease;
-    transform-origin: center;
+.mobile-menu-btn img {
+    width: 40px;
+    height: 40px;
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(0, 6px);
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(2) {
@@ -139,7 +149,7 @@ body {
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(0, -6px);
 }
 
 /* Mobile Menu */
@@ -152,10 +162,18 @@ body {
     left: 0;
     right: 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    overflow: hidden;
 }
 
 .mobile-menu.active {
     display: block;
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 500px;
 }
 
 .mobile-menu-content {
@@ -268,14 +286,7 @@ html {
     outline-offset: 2px;
 }
 
-/* Animation for mobile menu */
-.mobile-menu {
-    transform: translateY(-10px);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu.active {
-    transform: translateY(0);
-    opacity: 1;
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
 }

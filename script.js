@@ -4,8 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.mobile-menu');
     const body = document.body;
 
+    if (!mobileMenuBtn || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+    }
+
     // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function () {
+    mobileMenuBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
         const isActive = mobileMenu.classList.contains('active');
 
         if (isActive) {
@@ -19,14 +27,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function openMobileMenu() {
         mobileMenu.classList.add('active');
         mobileMenuBtn.classList.add('active');
-        body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        body.classList.add('menu-open');
+
+        // Add aria attributes for accessibility
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        mobileMenu.setAttribute('aria-hidden', 'false');
     }
 
     // Close mobile menu
     function closeMobileMenu() {
         mobileMenu.classList.remove('active');
         mobileMenuBtn.classList.remove('active');
-        body.style.overflow = ''; // Restore scrolling
+        body.classList.remove('menu-open');
+
+        // Update aria attributes
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
     }
 
     // Close mobile menu when clicking outside
@@ -53,6 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Close mobile menu when clicking on mobile links
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -75,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
 
-    window.addEventListener('scroll', function () {
+    const handleScroll = debounce(function () {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // Add shadow when scrolled
@@ -86,7 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         lastScrollTop = scrollTop;
-    });
+    }, 10);
+
+    window.addEventListener('scroll', handleScroll);
 
     // Icon button interactions
     const iconButtons = document.querySelectorAll('.icon-btn');
@@ -123,14 +151,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Currency button functionality
-    const currencyBtn = document.querySelector('.currency-btn');
-    if (currencyBtn) {
-        currencyBtn.addEventListener('click', function () {
+    const currencyBtns = document.querySelectorAll('.currency-btn');
+    currencyBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
             console.log('Currency selector clicked');
             // Add currency selection functionality here
             // You could show a dropdown with different currency options
         });
-    }
+    });
+
+    // Initialize aria attributes
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.setAttribute('aria-controls', 'mobile-menu');
+    mobileMenu.setAttribute('id', 'mobile-menu');
+    mobileMenu.setAttribute('aria-hidden', 'true');
 
     // Add loading animation
     window.addEventListener('load', function () {
@@ -150,3 +184,14 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+
+
+const toggleBtn = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+toggleBtn.addEventListener("click", () => {
+    toggleBtn.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+});
+
