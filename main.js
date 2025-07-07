@@ -89,6 +89,36 @@ const products = [
         img2: "./Images/bg-bottle8.webp",
         badge: "BEST SELLER"
     },
+    {
+        id: "SCENE 01",
+        name: "SCENE 01",
+        description: "Green Tea, Tuzu, Verbena",
+        price: "€55",
+        category: "room-sprays",
+        img1: "./Images/bg8.webp",
+        img2: "./Images/bg-bottle9.webp",
+        badge: "AWARD-WINNING"
+    },
+    {
+        id: "SCENE 02",
+        name: "SCENE 02",
+        description: "Fig, Marigold, Cedarwood",
+        price: "€55",
+        category: "room-sprays",
+        img1: "./Images/bg9.webp",
+        img2: "./Images/bg-bottle10.webp",
+        badge: "BEST SELLER"
+    },
+    {
+        id: "SCENE 03",
+        name: "SCENE 03",
+        description: "Leather, Tonka, Vanilla",
+        price: "€55",
+        category: "room-sprays",
+        img1: "./Images/bg10.webp",
+        img2: "./Images/bg-bottle11.webp",
+        badge: "BEST SELLER"
+    },
 ];
 
 
