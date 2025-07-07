@@ -4,10 +4,30 @@ const products = [
         name: "Cobalt Amber",
         description: "A Chic, Sultry Amber",
         price: "€145",
-        category: "fragrances",
+        category: "best-sellers",
         img1: "./Images/bg1.webp",
         img2: "./Images/bg-bottle.webp",
         badge: "BEST SELLER"
+    },
+    {
+        id: "the-apartment",
+        name: "The Apartment",
+        description: "A Dark And Sophisticated Gourmand",
+        price: "€145",
+        category: "best-sellers",
+        img1: "./Images/bg2.webp",
+        img2: "./Images/bg-bottle2.webp",
+        badge: "NEW"
+    },
+    {
+        id: "black-anise",
+        name: "Black Anise",
+        description: "A Vibrant, Smoky Amber",
+        price: "€145",
+        category: "best-sellers",
+        img1: "./Images/bg3.webp",
+        img2: "./Images/bg-bottle3.webp",
+        badge: ""
     },
     {
         id: "the-apartment",
@@ -20,43 +40,23 @@ const products = [
         badge: "NEW"
     },
     {
-        id: "black-anise",
-        name: "Black Anise",
-        description: "A Vibrant, Smoky Amber",
-        price: "€145",
-        category: "fragrances",
-        img1: "./Images/bg3.webp",
-        img2: "./Images/bg-bottle3.webp",
-        badge: ""
-    },
-    {
-        id: "mini-cedar",
-        name: "Mini Cedar",
-        description: "Compact woody scent",
-        price: "€35",
-        category: "minis",
-        img1: "./Images/mini1.webp",
-        img2: "./Images/mini-bottle.webp",
-        badge: "MINI"
-    },
-    {
-        id: "room-lavender",
-        name: "Lavender Room Spray",
-        description: "Calm your space instantly",
+        id: "CYAN NORI",
+        name: "CYAN NORI",
+        description: "A Sweet, Salty Musk",
         price: "€55",
-        category: "room-sprays",
-        img1: "./Images/room1.webp",
-        img2: "./Images/room1-bottle.webp",
-        badge: ""
+        category: "fragrances",
+        img1: "./Images/bg4.webp",
+        img2: "./Images/bg-bottle4.webp",
+        badge: "NEW"
     },
     {
-        id: "discovery-set",
-        name: "Discovery Set",
-        description: "Explore our full collection",
-        price: "€95",
-        category: "sets",
-        img1: "./Images/set1.webp",
-        img2: "./Images/set1-bottle.webp",
+        id: "PINK IRIS",
+        name: "PINK IRIS",
+        description: "A Comtemporary, Classic Floral",
+        price: "€195",
+        category: "fragrances",
+        img1: "./Images/bg5.webp",
+        img2: "./Images/bg-bottle5.webp",
         badge: ""
     }
 ];
