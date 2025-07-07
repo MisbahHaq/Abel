@@ -119,6 +119,36 @@ const products = [
         img2: "./Images/bg-bottle11.webp",
         badge: "BEST SELLER"
     },
+    {
+        id: "FRESH MINI PERFUME SET",
+        name: "FRESH MINI PERFUME SET",
+        description: "A Trio With Universal Appeal",
+        price: "€70",
+        category: "sets",
+        img1: "./Images/bg11.webp",
+        img2: "./Images/bg-bottle12.webp",
+        badge: ""
+    },
+    {
+        id: "BUILD YOUR OWN PERFUME SET",
+        name: "BUILD YOUR OWN PERFUME SET",
+        description: "Create Your Own Mini Set",
+        price: "€70",
+        category: "sets",
+        img1: "./Images/bg14.jpg",
+        img2: "./Images/bg-bottle13.webp",
+        badge: ""
+    },
+    {
+        id: "FLORAL MINI PERFUME SET",
+        name: "FLORAL MINI PERFUME SET",
+        description: "Designed For The Anthophile",
+        price: "€70",
+        category: "sets",
+        img1: "./Images/bg12.webp",
+        img2: "./Images/bg-bottle14.webp",
+        badge: ""
+    },
 ];
 
 
