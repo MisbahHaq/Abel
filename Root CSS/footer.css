@@ -1,0 +1,87 @@
+/* ========== 8. Footer ========== */
+.footer {
+    padding: 60px 5%;
+    background-color: #1a1a1a;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-col a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.newsletter .desc {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.newsletter-input input::placeholder {
+    color: #aaa;
+}
+
+.newsletter-input button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+}

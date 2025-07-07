@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Gilroy-Light.otf');
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('./Gilroy-ExtraBold.otf');
+}
+
+body {
+    font-family: "Gilroy",
+        Arial,
+        Helvetica,
+        sans-serif;
+}

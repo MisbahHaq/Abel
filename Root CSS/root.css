@@ -1,0 +1,59 @@
+/* ========== 1. Global Resets & Fonts ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    --font-size-small: 12px;
+    --font-size-base: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-xl: 28px;
+
+    --primary-color: #000;
+    --secondary-color: #666;
+    --accent-color: #dc3545;
+    --success-color: #28a745;
+    --border-color: #e0e0e0;
+    --light-gray: #f9f9f9;
+    --transition: 0.3s ease-in-out;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("./Fonts/Gilroy-Light.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("./Fonts/Gilroy-ExtraBold.otf");
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    transition: all 0.3s ease-in-out;
+}

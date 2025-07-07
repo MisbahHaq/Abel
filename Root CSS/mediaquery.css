@@ -1,0 +1,885 @@
+/* ========== 10. Media Queries ========== */
+
+@media (max-width: 1024px) {
+    .nav {
+        padding: 0 20px;
+    }
+
+    .concept {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 5%;
+        margin-bottom: 100px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 48%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .right-gift {
+        font-size: 18px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .products {
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px 0 10px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav-items,
+    .credentials {
+        gap: 16px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .credentials {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero img {
+        height: 40vh;
+    }
+
+    .concept {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-prod {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2%;
+        margin-bottom: 60px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 100%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+        gap: 20px;
+    }
+
+    .right-gift {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 2%;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        align-self: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 50px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-items a:hover,
+.credentials a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.credentials {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width: 480px) {
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        padding: 0 20px;
+    }
+
+    .concept {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 5%;
+        margin-bottom: 100px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 48%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .right-gift {
+        font-size: 18px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .products {
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .middle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .middle-text h1 {
+        font-size: 24px;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .middle-text p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px 0 10px;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav-items,
+    .credentials {
+        gap: 16px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .credentials {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 16px;
+        z-index: 1000;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+    .product-images {
+        position: static !important;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero img {
+        height: 40vh;
+    }
+
+    .concept {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-prod {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2%;
+        margin-bottom: 60px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 100%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+        gap: 20px;
+    }
+
+    .right-gift {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 2%;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        align-self: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .product-images {
+        position: static !important;
+    }
+
+    .nav {
+        gap: var(--spacing-lg);
+    }
+
+    .product-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .product-details {
+        padding-left: 0;
+    }
+
+    .main-image {
+        position: static;
+    }
+
+    .thumbnail-images {
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .award-badge {
+        position: static;
+        margin-bottom: var(--spacing-md);
+        justify-content: center;
+    }
+
+    .header-actions {
+        gap: var(--spacing-md);
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-title {
+        font-size: var(--font-size-large);
+    }
+}
+
+@media (max-width: 480px) {
+    .prod .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+}
+
+@media (max-width: 1024px) {
+    .concept {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 5%;
+        margin-bottom: 100px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 48%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .right-gift {
+        font-size: 18px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .products {
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gift-row {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 10px 20px 10px;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .gift-row .left {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .gift-row .center {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .line {
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav-items,
+    .credentials {
+        gap: 16px;
+    }
+
+    .credentials {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero img {
+        height: 40vh;
+    }
+
+    .concept {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-prod {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2%;
+        margin-bottom: 60px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 100%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+        gap: 20px;
+    }
+
+    .right-gift {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 2%;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        align-self: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
