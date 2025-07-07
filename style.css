@@ -128,6 +128,33 @@ body {
     padding: 4rem 0;
 }
 
+.mid-text h1 {
+    font-weight: normal;
+}
+
+.mid-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#category-tabs h5.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mid-text .right {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.right h5 {
+    font-weight: normal;
+}
+
 .hero {
     text-align: center;
 }

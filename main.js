@@ -1,174 +1,137 @@
-const products = {
-    "cobalt-amber": {
+const products = [
+    {
+        id: "cobalt-amber",
         name: "Cobalt Amber",
         description: "A Chic, Sultry Amber",
         price: "€145",
+        category: "fragrances",
+        img1: "./Images/bg1.webp",
+        img2: "./Images/bg-bottle.webp",
+        badge: "BEST SELLER"
     },
-    "the-apartment": {
+    {
+        id: "the-apartment",
         name: "The Apartment",
         description: "A Dark And Sophisticated Gourmand",
         price: "€145",
+        category: "fragrances",
+        img1: "./Images/bg2.webp",
+        img2: "./Images/bg-bottle2.webp",
+        badge: "NEW"
     },
-    "black-anise": {
+    {
+        id: "black-anise",
         name: "Black Anise",
         description: "A Vibrant, Smoky Amber",
         price: "€145",
+        category: "fragrances",
+        img1: "./Images/bg3.webp",
+        img2: "./Images/bg-bottle3.webp",
+        badge: ""
     },
-};
+    {
+        id: "mini-cedar",
+        name: "Mini Cedar",
+        description: "Compact woody scent",
+        price: "€35",
+        category: "minis",
+        img1: "./Images/mini1.webp",
+        img2: "./Images/mini-bottle.webp",
+        badge: "MINI"
+    },
+    {
+        id: "room-lavender",
+        name: "Lavender Room Spray",
+        description: "Calm your space instantly",
+        price: "€55",
+        category: "room-sprays",
+        img1: "./Images/room1.webp",
+        img2: "./Images/room1-bottle.webp",
+        badge: ""
+    },
+    {
+        id: "discovery-set",
+        name: "Discovery Set",
+        description: "Explore our full collection",
+        price: "€95",
+        category: "sets",
+        img1: "./Images/set1.webp",
+        img2: "./Images/set1-bottle.webp",
+        badge: ""
+    }
+];
+
 
 let cart = [];
+const productsGrid = document.querySelector(".products-grid");
 
-const quickAddButtons = document.querySelectorAll(".quick-add-btn");
-const notification = document.getElementById("notification");
-const navLinks = document.querySelectorAll(".nav-link");
+function renderProducts(category) {
+    const filtered = products.filter(p => p.category === category);
+    productsGrid.innerHTML = filtered.map(product => `
+    <div class="product-card" data-product="${product.id}">
+      <div class="product-image">
+        <img src="${product.img1}" alt="${product.name}" class="bottom-image" />
+        <img src="${product.img2}" alt="${product.name}" class="top-image" />
+        ${product.badge ? `<div class="product-badge new">${product.badge}</div>` : ""}
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-description">${product.description}</p>
+        <p class="product-price">${product.price}</p>
+        <div class="quick-add-wrapper">
+          <button class="quick-add-btn" data-product="${product.id}">QUICK ADD</button>
+          <div class="quick-add-options">
+            <button class="option-btn">6ml</button>
+            <button class="option-btn">50ml</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
 
-function init() {
     setupQuickAddButtons();
-    setupNavigation();
-    setupScrollEffects();
 }
 
 function setupQuickAddButtons() {
-    quickAddButtons.forEach((button) => {
+    document.querySelectorAll(".quick-add-btn").forEach(button => {
         button.addEventListener("click", handleQuickAdd);
     });
 }
 
 function handleQuickAdd(e) {
     e.preventDefault();
-    e.stopPropagation();
-
     const productId = e.target.dataset.product;
-    const product = products[productId];
+    const product = products.find(p => p.id === productId);
 
     if (product) {
-        addToCart(product);
-        showNotification(`${product.name} added to cart!`);
-        const button = e.target;
-        const originalText = button.textContent;
-        button.textContent = "ADDED!";
-        button.style.background = "#4CAF50";
-        button.style.color = "white";
-        button.style.borderColor = "#4CAF50";
-
+        cart.push(product);
+        e.target.textContent = "ADDED!";
+        e.target.style.background = "#4CAF50";
+        e.target.style.color = "white";
         setTimeout(() => {
-            button.textContent = originalText;
-            button.style.background = "";
-            button.style.color = "";
-            button.style.borderColor = "";
+            e.target.textContent = "QUICK ADD";
+            e.target.style.background = "";
+            e.target.style.color = "";
         }, 1500);
     }
 }
 
-function addToCart(product) {
-    cart.push(product);
-    updateCartCount();
-}
+function setupCategorySwitching() {
+    document.querySelectorAll(".mid-text .right h5").forEach(item => {
+        item.addEventListener("click", () => {
+            const category = item.dataset.category;
 
-function updateCartCount() {
-    console.log(`Cart items: ${cart.length}`);
-}
+            document.querySelectorAll(".mid-text .right h5").forEach(el =>
+                el.classList.remove("active")
+            );
+            item.classList.add("active");
 
-function showNotification(message) {
-    notification.textContent = message;
-    notification.classList.add("show");
-
-    setTimeout(() => {
-        notification.classList.remove("show");
-    }, 3000);
-}
-
-function setupNavigation() {
-    navLinks.forEach((link) => {
-        link.addEventListener("click", handleNavClick);
-    });
-}
-
-function handleNavClick(e) {
-    e.preventDefault();
-    const category = e.target.textContent;
-
-    navLinks.forEach((link) => link.classList.remove("active"));
-
-    e.target.classList.add("active");
-
-    showNotification(`Browsing ${category}`);
-}
-
-function setupScrollEffects() {
-    const header = document.querySelector(".header");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-            header.style.background = "rgba(255, 255, 255, 0.98)";
-            header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
-        } else {
-            header.style.background = "rgba(255, 255, 255, 0.95)";
-            header.style.boxShadow = "none";
-        }
-    });
-}
-
-function setupProductCardEffects() {
-    const productCards = document.querySelectorAll(".product-card");
-
-    productCards.forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "translateY(-8px) scale(1.02)";
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "translateY(0) scale(1)";
+            renderProducts(category);
         });
     });
 }
 
-function setupSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                });
-            }
-        });
-    });
-}
-
-function setupIntersectionObserver() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll(".product-card").forEach((card) => {
-        observer.observe(card);
-    });
-}
-
-function handleResize() {
-    console.log("Window resized");
-}
-
-window.addEventListener("resize", handleResize);
-window.addEventListener("load", () => {
-    setupProductCardEffects();
-    setupSmoothScrolling();
-    setupIntersectionObserver();
+document.addEventListener("DOMContentLoaded", () => {
+    renderProducts("best-sellers");
+    setupCategorySwitching();
 });
-
-document.addEventListener("DOMContentLoaded", init);
-
-export { addToCart, showNotification, products };
