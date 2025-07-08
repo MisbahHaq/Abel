@@ -142,3 +142,81 @@
         padding: 0.65rem 1rem;
     }
 }
+
+@media (max-width: 1024px) {
+
+    .second-page,
+    .third-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .second-left,
+    .second-right,
+    .third-left,
+    .third-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .second-left img,
+    .third-right img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .second-right,
+    .third-left {
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .second-right h1,
+    .third-left h1 {
+        font-size: 24px;
+    }
+
+    .second-right p,
+    .third-left p {
+        font-size: 16px;
+    }
+
+    .second-button {
+        font-size: 12px;
+        padding: 10px 24px;
+    }
+
+    /* Reordering for third-page: image first, text after */
+    .third-right {
+        order: 1;
+    }
+
+    .third-left {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .second-right,
+    .third-left {
+        padding: 20px;
+    }
+
+    .second-right h1,
+    .third-left h1 {
+        font-size: 20px;
+    }
+
+    .second-right p,
+    .third-left p {
+        font-size: 14px;
+    }
+
+    .second-button {
+        font-size: 11px;
+        padding: 8px 20px;
+    }
+}

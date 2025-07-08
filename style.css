@@ -22,6 +22,7 @@
   ------------------------------ */
 body {
     font-family: Gilroy, Arial, Helvetica, sans-serif;
+    background-color: #fdf1dbe5;
 }
 
 /* ------------------------------
@@ -106,7 +107,6 @@ body {
 }
 
 .second-left {
-    background-color: rebeccapurple;
     width: 50%;
 }
 
@@ -120,19 +120,38 @@ body {
 .second-right {
     width: 50%;
     font-family: Gilroy, Arial, Helvetica, sans-serif;
-    border-top: 0.2px solid black;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 50px;
-    background-color: rebeccapurple;
-    color: white;
+    color: black;
+    background-color: rgba(253, 241, 219, 0.897);
 }
 
 .second-right h1,
 .second-right p {
     margin: 0 0 20px 0;
+}
+
+.second-button {
+    padding: 12px 36px;
+    font-size: 14px;
+    background-color: whitesmoke;
+    color: black;
+    border: 0.2px solid grey;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.second-button:hover {
+    background-color: black;
+    color: white;
 }
 
 /* ------------------------------
@@ -159,20 +178,20 @@ body {
 .third-left {
     width: 50%;
     font-family: Gilroy, Arial, Helvetica, sans-serif;
-    border-top: 0.2px solid black;
+    border-left: 0.2px solid grey;
 }
 
 .third-left {
     width: 50%;
     font-family: Gilroy, Arial, Helvetica, sans-serif;
-    border-top: 0.2px solid black;
+    border-left: 0.2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 50px;
-    background-color: rebeccapurple;
-    color: white;
+    background-color: rgba(253, 241, 219, 0.897);
+    color: black;
 }
 
 .third-left h1,
@@ -180,11 +199,27 @@ body {
     margin: 0 0 20px 0;
 }
 
+/* ------------------------------
+     FOURTH PAGE
+  ------------------------------ */
+
+.fourth-page .mid-text h1 {
+    margin-top: 3rem;
+}
+
+.fourth-page .main {
+    margin-top: 0;
+}
+
+.fourth-page .mid-text {
+    margin-top: 0;
+    border-left: 0.2px solid grey;
+}
 
 /* ------------------------------
      MID SECTION (CATEGORY + SCROLL)
   ------------------------------ */
-.main {
+.main1 {
     padding: 4rem 0;
 }
 
@@ -271,8 +306,8 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
-    border: 0.2px solid black;
-    border-left: 0.2px solid black;
+    border: 0.2px solid grey;
+    border-left: 0.2px solid grey;
     border-right: none;
     border-top: none;
     animation: fadeInUp 0.6s ease forwards;
