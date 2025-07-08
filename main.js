@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const productData = {
     citrus: {
         image:
-            "https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+            "./Images/bg4.webp",
         name: "CITRUS BURST",
         notes: {
             top: "Bergamot, Lemon",
@@ -248,7 +248,7 @@ const productData = {
     },
     green: {
         image:
-            "https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+            "./Images/bg6.webp",
         name: "VERDANT",
         notes: {
             top: "Green Leaves, Mint",
@@ -260,7 +260,7 @@ const productData = {
     },
     water: {
         image:
-            "https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+            "./Images/bg1.webp",
         name: "AQUA",
         notes: {
             top: "Sea Salt, Ozone",
@@ -270,21 +270,21 @@ const productData = {
         description:
             "Ocean breeze meets coastal serenity. Clean aquatic notes evoke the endless horizon where sky meets sea.",
     },
-    wood: {
+    musk: {
         image:
-            "https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-        name: "PAUSE",
+            "./Images/bg12.webp",
+        name: "EMBER",
         notes: {
-            top: "Violet Leaf",
-            heart: "Mimosa, Narcissus",
-            base: "Hay Absolute",
+            top: "Cardamom, Pink Pepper",
+            heart: "Cinnamon, Clove",
+            base: "Amber, Patchouli",
         },
         description:
-            "Stillness after warm summer rain—a collective quiet, the smell of wet earth filling the air. Award-winning Pause was created as a tribute to the seasons of hormonal change.",
+            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
     },
     floral: {
         image:
-            "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+            "./Images/bg3.webp",
         name: "BLOOM",
         notes: {
             top: "Rose Petals, Peony",
@@ -296,7 +296,55 @@ const productData = {
     },
     spice: {
         image:
-            "https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+            "./Images/bg5.webp",
+        name: "EMBER",
+        notes: {
+            top: "Cardamom, Pink Pepper",
+            heart: "Cinnamon, Clove",
+            base: "Amber, Patchouli",
+        },
+        description:
+            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+    },
+    wood: {
+        image:
+            "./Images/bg7.webp",
+        name: "PAUSE",
+        notes: {
+            top: "Violet Leaf",
+            heart: "Mimosa, Narcissus",
+            base: "Hay Absolute",
+        },
+        description:
+            "Stillness after warm summer rain—a collective quiet, the smell of wet earth filling the air. Award-winning Pause was created as a tribute to the seasons of hormonal change.",
+    },
+    amber: {
+        image:
+            "./Images/bg11.webp",
+        name: "EMBER",
+        notes: {
+            top: "Cardamom, Pink Pepper",
+            heart: "Cinnamon, Clove",
+            base: "Amber, Patchouli",
+        },
+        description:
+            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+    },
+    fruit: {
+        image:
+            "./Images/bg9.webp",
+        name: "EMBER",
+        notes: {
+            top: "Cardamom, Pink Pepper",
+            heart: "Cinnamon, Clove",
+            base: "Amber, Patchouli",
+        },
+        description:
+            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+    },
+    gourmand: {
+        image:
+            "./Images/bg10.webp",
         name: "EMBER",
         notes: {
             top: "Cardamom, Pink Pepper",
