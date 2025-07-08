@@ -239,72 +239,72 @@ const productData = {
             "./Images/bg4.webp",
         name: "CITRUS BURST",
         notes: {
-            top: "Bergamot, Lemon",
-            heart: "Orange Blossom, Neroli",
-            base: "White Musk, Cedar",
+            top: "Tangerine, white peach",
+            heart: "Plant derived musk",
+            base: "Nori",
         },
         description:
-            "Fresh morning energy captured in a bottle. Zesty citrus notes dance with delicate florals, creating an invigorating scent that awakens the senses.",
+            "Lazing on the beach after an ocean swim — sand on your skin, juice on your chin, an ocean breeze in your hair. Award-winning, best-selling Cyan Nori is a truly original and genderless aquatic scent.",
     },
     green: {
         image:
             "./Images/bg6.webp",
-        name: "VERDANT",
+        name: "GREEN CEDAR",
         notes: {
-            top: "Green Leaves, Mint",
-            heart: "Lily of the Valley, Cucumber",
-            base: "Moss, Vetiver",
+            top: "Magnolia, cardamom",
+            heart: "Cypriol, guaiac wood",
+            base: "Texas and atlas mountain cedar",
         },
         description:
-            "The essence of a secret garden after morning dew. Crisp green notes blend with soft florals for a refreshing, natural escape.",
+            "Walking through dense forest — tree- tops swaying in the wind, soft moss underfoot, fragrant sap dripping from branches overhead.Green Cedar is a genderless, woody scent both intoxicating and invigorating.",
     },
     water: {
         image:
             "./Images/bg1.webp",
-        name: "AQUA",
+        name: "CYAN NORI",
         notes: {
-            top: "Sea Salt, Ozone",
-            heart: "Water Lily, Marine Accord",
-            base: "Driftwood, Ambergris",
+            top: "Tangerine, white peach",
+            heart: "Plant derived musk",
+            base: "Nori",
         },
         description:
-            "Ocean breeze meets coastal serenity. Clean aquatic notes evoke the endless horizon where sky meets sea.",
+            "Lazing on the beach after an ocean swim — sand on your skin, juice on your chin, an ocean breeze in your hair. Award-winning, best-selling Cyan Nori is a truly original and genderless aquatic scent.",
     },
     musk: {
         image:
             "./Images/bg12.webp",
-        name: "EMBER",
+        name: "NURTURE",
         notes: {
-            top: "Cardamom, Pink Pepper",
-            heart: "Cinnamon, Clove",
-            base: "Amber, Patchouli",
+            top: "Fleur l'orange, bulgarian rose, lentisque",
+            heart: "Jasmin Sambac, Ginger",
+            base: "East indian sandalwood",
         },
         description:
-            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+            "A morning to yourself—slept-in sheets, warm cup of tea in hand, a gentle breeze blowing through the window. Nurture is created in collaboration with Grey Label to honor mothers—and others.",
     },
     floral: {
         image:
             "./Images/bg3.webp",
-        name: "BLOOM",
+        name: "PINK IRIS",
         notes: {
-            top: "Rose Petals, Peony",
-            heart: "Jasmine, Tuberose",
-            base: "Sandalwood, Vanilla",
+            top: "Sichuan pepper, raspberry leaf, grapefruit, basil",
+            heart: "Orris root(iris), rose, jasmine",
+            base: "Vanilla, musk",
         },
         description:
-            "A garden in full bloom, captured at golden hour. Romantic florals intertwine with warm woods for timeless elegance.",
+            "Picking flowers in full sun — colours vivid in electric light, fragrant petals wilting in the relentless heat. Award-winning Pink Iris is a boldly sweet but spicy scent, a modern take on the classic floral.",
     },
     spice: {
         image:
             "./Images/bg5.webp",
-        name: "EMBER",
+        name: "COBALT AMBER",
         notes: {
-            top: "Cardamom, Pink Pepper",
-            heart: "Cinnamon, Clove",
-            base: "Amber, Patchouli",
+            top: "Star anise",
+            heart: "Cacao, blackcurrant",
+            base: "Tobacco",
         },
         description:
-            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+            "The end of a night out — dark, busy streets, dancing in cramped spaces, a smoky, sweet taste on your tongue. Black Anise is a sultry, late-night scent — long-lasting and immersive.",
     },
     wood: {
         image:
@@ -321,38 +321,38 @@ const productData = {
     amber: {
         image:
             "./Images/bg11.webp",
-        name: "EMBER",
+        name: "COBALT AMBER",
         notes: {
-            top: "Cardamom, Pink Pepper",
-            heart: "Cinnamon, Clove",
-            base: "Amber, Patchouli",
+            top: "Pink pepper, cardamom, juniper berry",
+            heart: "Cacao, tonka, peru balsam",
+            base: "Amber",
         },
         description:
-            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+            "A cosy night in cold weather — curtains closed, fireplace crackling, a frosted glass of your favourite drink nearby. Cobalt Amber is a luxurious, sophisticated evening scent.",
     },
     fruit: {
         image:
             "./Images/bg9.webp",
-        name: "EMBER",
+        name: "GOLDEN NEROLI",
         notes: {
-            top: "Cardamom, Pink Pepper",
-            heart: "Cinnamon, Clove",
-            base: "Amber, Patchouli",
+            top: "Neroli, matcha tea",
+            heart: "Petitgrain, ylang ylang, jasmin sambac",
+            base: "East indian sandalwood, vanilla",
         },
         description:
-            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+            "Eating freshly cut oranges in the garden — sticky skin, flowers bursting, late afternoon sun casting everything in a golden glow. Golden Neroli bottles the feeling of a long day basking in the warmth of the sun.",
     },
     gourmand: {
         image:
             "./Images/bg10.webp",
-        name: "EMBER",
+        name: "THE APARTMENT",
         notes: {
-            top: "Cardamom, Pink Pepper",
-            heart: "Cinnamon, Clove",
-            base: "Amber, Patchouli",
+            top: "Tart cherry, rum",
+            heart: "Tuberose, cacao, jasmine",
+            base: "Myrrh, tolu balsam",
         },
         description:
-            "Warmth by the fireside, stories shared in whispered tones. Exotic spices blend with rich resins for cozy sophistication.",
+            "Haussmannian architecture.Light filtering through half- drawn velvet curtains.A cherry stained napkin.",
     },
 };
 
