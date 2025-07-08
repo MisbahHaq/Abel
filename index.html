@@ -181,7 +181,8 @@
         <h1 class="discover-title">BROWSE BY PRODUCT TYPE</h1>
       </div>
     </main>
-    <section class="product-types">
+    <!-- <section class="product-types"> -->
+      <section class="product-types scroll-container">
       <div class="product-box">
         <img src="./Images/prod-1.webp" alt="Perfume Sets" />
         <div class="overlay">
@@ -209,6 +210,12 @@
         </div>
       </div>
     </section>
+    <div class="pagination">
+      <span class="active">[ 01 ]</span>
+      <span>02</span>
+      <span>03</span>
+    </div>
+    
   </div>
 
   <footer class="footer">
@@ -251,7 +258,24 @@
       <p>© ABEL All rights reserved.</p>
     </div>
   </footer>
-
+  <script>
+    const productBoxes = document.querySelectorAll('.product-box');
+    const paginationItems = document.querySelectorAll('.pagination span');
+  
+    document.querySelector('.product-types').addEventListener('scroll', () => {
+      const container = document.querySelector('.product-types');
+      const scrollLeft = container.scrollLeft;
+      const width = container.offsetWidth;
+  
+      const index = Math.round(scrollLeft / width);
+  
+      paginationItems.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+        item.textContent = i === index ? `[ 0${i + 1} ]` : `0${i + 1}`;
+      });
+    });
+  </script>
+  
   <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
   <script>
     const lenis = new Lenis({
