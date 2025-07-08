@@ -160,19 +160,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Initialize aria attributes
     mobileMenuBtn.setAttribute('aria-expanded', 'false');
     mobileMenuBtn.setAttribute('aria-controls', 'mobile-menu');
     mobileMenu.setAttribute('id', 'mobile-menu');
     mobileMenu.setAttribute('aria-hidden', 'true');
 
-    // Add loading animation
     window.addEventListener('load', function () {
         document.body.classList.add('loaded');
     });
 });
 
-// Utility function to debounce scroll events
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
