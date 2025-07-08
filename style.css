@@ -203,8 +203,13 @@ body {
      FOURTH PAGE
   ------------------------------ */
 
+.fourth-page {
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+}
+
 .fourth-page .mid-text h1 {
     margin-top: 3rem;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
 }
 
 .fourth-page .main {
@@ -215,6 +220,97 @@ body {
     margin-top: 0;
     border-left: 0.2px solid grey;
 }
+
+.product-types {
+    display: flex;
+    height: 100vh;
+}
+
+.product-box {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-box:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-box:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .product-types {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .product-box {
+        height: 100vh;
+        /* optional: each product fills the screen height */
+    }
+
+    .product-box img {
+        height: 100%;
+        /* maintain full coverage */
+    }
+}
+
+
+
 
 /* ------------------------------
      MID SECTION (CATEGORY + SCROLL)
