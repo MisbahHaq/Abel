@@ -627,87 +627,65 @@ body {
     transform: translateY(-1px);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .fragrance-container {
-        grid-template-columns: 250px 1fr 300px;
-    }
 
-    .fragrance-product-name {
-        font-size: 3rem;
-        letter-spacing: 6px;
-    }
-
-    .fragrance-product-details {
-        padding: 40px 30px;
-    }
+/* ------------------------------
+     FINAL PAGE
+  ------------------------------ */
+.final-page {
+    width: 100%;
+    height: 100vh;
 }
 
-@media (max-width: 768px) {
-    .fragrance-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-    }
-
-    .scent-categories-grid {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: auto auto;
-        order: 3;
-    }
-
-    .scent-category-item {
-        padding: 16px 8px;
-        font-size: 9px;
-    }
-
-    .fragrance-hero {
-        order: 1;
-    }
-
-    .fragrance-hero-image {
-        height: 60vh;
-    }
-
-    .fragrance-product-name {
-        font-size: 2.5rem;
-        letter-spacing: 4px;
-    }
-
-    .fragrance-product-details {
-        order: 2;
-        padding: 40px 20px;
-        gap: 30px;
-    }
-
-    .fragrance-navigation-dots {
-        bottom: 20px;
-    }
+.image-container {
+    position: relative;
 }
 
-@media (max-width: 480px) {
-    .scent-categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-    }
+.image-container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
 
-    .scent-category-item {
-        padding: 20px 12px;
-        font-size: 10px;
-    }
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+}
 
-    .fragrance-hero-image {
-        height: 50vh;
-    }
+.text-overlay h1 {
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
 
-    .fragrance-product-name {
-        font-size: 2rem;
-        letter-spacing: 3px;
-    }
+.text-overlay p {
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
 
-    .fragrance-product-details {
-        padding: 30px 20px;
-        gap: 25px;
-    }
+.text-overlay button {
+    background-color: #f3f3f3;
+    color: black;
+    border: 0.2px solid grey;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.text-overlay button:hover {
+    background-color: black;
+    color: whitesmoke;
 }
 
 /* ------------------------------

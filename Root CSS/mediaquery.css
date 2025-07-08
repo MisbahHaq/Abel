@@ -379,3 +379,132 @@
         padding: 8px 20px;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .fragrance-container {
+        grid-template-columns: 250px 1fr 300px;
+    }
+
+    .fragrance-product-name {
+        font-size: 3rem;
+        letter-spacing: 6px;
+    }
+
+    .fragrance-product-details {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fragrance-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .scent-categories-grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto;
+        order: 3;
+    }
+
+    .scent-category-item {
+        padding: 16px 8px;
+        font-size: 9px;
+    }
+
+    .fragrance-hero {
+        order: 1;
+    }
+
+    .fragrance-hero-image {
+        height: 60vh;
+    }
+
+    .fragrance-product-name {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .fragrance-product-details {
+        order: 2;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .fragrance-navigation-dots {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scent-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .scent-category-item {
+        padding: 20px 12px;
+        font-size: 10px;
+    }
+
+    .fragrance-hero-image {
+        height: 50vh;
+    }
+
+    .fragrance-product-name {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .fragrance-product-details {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-overlay {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    .text-overlay h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .text-overlay button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .text-overlay h1 {
+        font-size: 22px;
+    }
+
+    .text-overlay p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .text-overlay button {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
