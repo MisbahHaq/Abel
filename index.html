@@ -182,16 +182,17 @@
       </div>
     </main>
     <!-- <section class="product-types"> -->
-      <section class="product-types scroll-container">
+    <section class="product-types scroll-container">
       <div class="product-box">
         <img src="./Images/prod-1.webp" alt="Perfume Sets" />
         <div class="overlay">
           <h2>PERFUME SETS</h2>
-          <p>Experience our award-winning eau de parfum in a trio of pocket-sized mini perfumes and discover why natural is better.</p>
+          <p>Experience our award-winning eau de parfum in a trio of pocket-sized mini perfumes and discover why natural
+            is better.</p>
           <button>SHOP NOW</button>
         </div>
       </div>
-  
+
       <div class="product-box">
         <img src="./Images/prod-2.webp" alt="Natural Perfumes" />
         <div class="overlay">
@@ -200,7 +201,7 @@
           <button>DISCOVER NOW</button>
         </div>
       </div>
-  
+
       <div class="product-box">
         <img src="./Images/prod-3.webp" alt="Room Sprays" />
         <div class="overlay">
@@ -224,9 +225,12 @@
     <div class="fifth-right">
       <h1>A RADICAL<br />APPROACH</h1>
       <p>
-        Behind every Abel fragrance is a radical approach to how we operate. In a fragrance world shrouded by secrecy, we’re always transparent.
+        Behind every Abel fragrance is a radical approach to how we operate. In a fragrance world shrouded by secrecy,
+        we’re always transparent.
       </p>
-      <p>In a culture fuelled by hype and excess, we favour the long view and curbing our environmental footprint. And in our use of biotechnology, guided by the artistry of our master perfumer, we create long-lasting 100% natural fragrances that eliminate the need for petrochemical-derived synthetic ingredients.</p>
+      <p>In a culture fuelled by hype and excess, we favour the long view and curbing our environmental footprint. And
+        in our use of biotechnology, guided by the artistry of our master perfumer, we create long-lasting 100% natural
+        fragrances that eliminate the need for petrochemical-derived synthetic ingredients.</p>
       <button class="fifth-button">READ MORE ABOUT OUR PRACTICE</button>
     </div>
   </div>
@@ -235,13 +239,77 @@
     <div class="sixth-left">
       <h1>OUR STORY</h1>
       <p>
-        Founded by former winemaker Frances Shoemack in 2013, Abel first emerged in Amsterdam and is now headquartered in Wellington, New Zealand. Operating across oceans, we work closely with master perfumer Isaac Sinclair and perfumer Dr Fanny Grau to create forward-thinking natural fragrances, made in good conscience.
+        Founded by former winemaker Frances Shoemack in 2013, Abel first emerged in Amsterdam and is now headquartered
+        in Wellington, New Zealand. Operating across oceans, we work closely with master perfumer Isaac Sinclair and
+        perfumer Dr Fanny Grau to create forward-thinking natural fragrances, made in good conscience.
       </p>
       <button class="fifth-button">READ MORE</button>
     </div>
     <div class="sixth-right">
       <img src="./Images/info-2.webp" alt="" />
     </div>
+  </div>
+
+  <div class="seventh-page">
+    <div class="fragrance-container">
+      <!-- Scent Categories Grid -->
+      <div class="scent-categories-grid">
+          <div class="scent-category-item active" data-category="citrus">CITRUS</div>
+          <div class="scent-category-item" data-category="green">GREEN</div>
+          <div class="scent-category-item" data-category="water">WATER</div>
+          <div class="scent-category-item" data-category="musk">MUSK</div>
+          <div class="scent-category-item" data-category="fruit">FRUIT</div>
+          <div class="scent-category-item" data-category="floral">FLORAL</div>
+          <div class="scent-category-item" data-category="spice">SPICE</div>
+          <div class="scent-category-item" data-category="wood">[ WOOD ]</div>
+          <div class="scent-category-item" data-category="amber">AMBER</div>
+          <div class="scent-category-item" data-category="gourmand">GOURMAND</div>
+      </div>
+
+      <!-- Main Product Area -->
+      <div class="fragrance-hero">
+          <div class="fragrance-hero-image">
+              <img src="https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Yellow cosmos flowers" id="fragrance-hero-img">
+              <div class="fragrance-hero-overlay">
+                  <h1 class="fragrance-product-name">PAUSE</h1>
+              </div>
+              <div class="fragrance-navigation-dots">
+                  <span class="fragrance-dot"></span>
+                  <span class="fragrance-dot active"></span>
+                  <span class="fragrance-dot"></span>
+                  <span class="fragrance-dot"></span>
+              </div>
+          </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="fragrance-product-details">
+          <div class="fragrance-notes">
+              <div class="fragrance-note-group">
+                  <div class="fragrance-note-label">TOP</div>
+                  <div class="fragrance-note-value">Violet Leaf</div>
+              </div>
+              <div class="fragrance-note-group">
+                  <div class="fragrance-note-label">HEART</div>
+                  <div class="fragrance-note-value">Mimosa, Narcissus</div>
+              </div>
+              <div class="fragrance-note-group">
+                  <div class="fragrance-note-label">BASE</div>
+                  <div class="fragrance-note-value">Hay Absolute</div>
+              </div>
+          </div>
+
+          <div class="fragrance-mood-section">
+              <div class="fragrance-mood-label">MOOD</div>
+              <div class="fragrance-mood-description">
+                  Stillness after warm summer rain—a collective quiet, the smell of wet earth filling the air. Award-winning Pause was created as a tribute to the seasons of hormonal change.
+              </div>
+          </div>
+
+          <button class="fragrance-shop-button">SHOP PAUSE</button>
+      </div>
+  </div>
+    
   </div>
 
   <footer class="footer">
@@ -284,25 +352,42 @@
       <p>© ABEL All rights reserved.</p>
     </div>
   </footer>
+
   <script>
     const productBoxes = document.querySelectorAll('.product-box');
     const paginationItems = document.querySelectorAll('.pagination span');
-  
     document.querySelector('.product-types').addEventListener('scroll', () => {
       const container = document.querySelector('.product-types');
       const scrollLeft = container.scrollLeft;
       const width = container.offsetWidth;
-  
       const index = Math.round(scrollLeft / width);
-  
       paginationItems.forEach((item, i) => {
         item.classList.toggle('active', i === index);
         item.textContent = i === index ? `[ 0${i + 1} ]` : `0${i + 1}`;
       });
     });
   </script>
-  
+
+<script>
+  const boxes = document.querySelectorAll('.box');
+  const contents = document.querySelectorAll('.content');
+
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      boxes.forEach(b => b.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      box.classList.add('active');
+      const target = box.getAttribute('data-content');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+
+
+
   <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
   <script>
     const lenis = new Lenis({
       autoRaf: true,
@@ -312,7 +397,9 @@
     });
   </script>
   <script src="script.js"></script>
+
   <script src="main.js"></script>
+
 </body>
 
 </html>
