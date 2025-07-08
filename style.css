@@ -124,20 +124,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Vertical center */
     align-items: flex-start;
-    /* Align items to the left */
     padding-left: 50px;
-    /* Optional: adds space from the left edge */
     background-color: rebeccapurple;
     color: white;
-    /* Optional: better contrast on purple background */
 }
 
 .second-right h1,
 .second-right p {
     margin: 0 0 20px 0;
-    /* Adds space between elements */
 }
 
 /* ------------------------------
@@ -165,6 +160,24 @@ body {
     width: 50%;
     font-family: Gilroy, Arial, Helvetica, sans-serif;
     border-top: 0.2px solid black;
+}
+
+.third-left {
+    width: 50%;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    border-top: 0.2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.third-left h1,
+.third-left p {
+    margin: 0 0 20px 0;
 }
 
 
