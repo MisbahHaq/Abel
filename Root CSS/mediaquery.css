@@ -302,3 +302,80 @@
         color: black;
     }
 }
+
+@media (max-width: 1024px) {
+
+    .fifth-page,
+    .sixth-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .fifth-left,
+    .fifth-right,
+    .sixth-left,
+    .sixth-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .fifth-left img,
+    .sixth-right img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .fifth-right,
+    .sixth-left {
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fifth-right h1,
+    .sixth-left h1 {
+        font-size: 24px;
+    }
+
+    .fifth-right p,
+    .sixth-left p {
+        font-size: 16px;
+    }
+
+    .fifth-button {
+        font-size: 12px;
+        padding: 10px 24px;
+    }
+
+    .sixth-right {
+        order: 1;
+    }
+
+    .sixth-left {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .fifth-right,
+    .sixth-left {
+        padding: 20px;
+    }
+
+    .fifth-right h1,
+    .sixth-left h1 {
+        font-size: 20px;
+    }
+
+    .fifth-right p,
+    .sixth-left p {
+        font-size: 14px;
+    }
+
+    .fifth-button {
+        font-size: 11px;
+        padding: 8px 20px;
+    }
+}
