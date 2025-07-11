@@ -438,7 +438,51 @@ body {
     z-index: 100;
 }
 
-.aroma-select-btn {
+/* Hide mobile select aroma button on desktop */
+.aroma-select-btn-mobile {
+    display: none;
+}
+
+/* Show desktop aroma nav on desktop */
+.aroma-nav-desktop {
+    display: flex;
+    gap: 10px;
+}
+
+.aroma-nav-desktop .aroma-nav-item {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    background: #fdf1db;
+    border: 1px solid #e0d2b8;
+    border-radius: 6px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-family: "Gilroy Bold", Gilroy, Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 8px rgba(253, 241, 219, 0.15);
+}
+
+.aroma-nav-desktop .aroma-nav-item:hover,
+.aroma-nav-desktop .aroma-nav-item.active {
+    background: #f5e3c2;
+    color: #111;
+    border: 1px solid #e0cfa0;
+}
+
+/* Mobile: show select aroma button, hide desktop nav */
+@media (max-width: 900px) {
+    .aroma-select-btn-mobile {
+        display: inline-block;
+    }
+
+    .aroma-nav-desktop {
+        display: none;
+    }
+}
+
+.aroma-select-btn-mobile {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -454,7 +498,7 @@ body {
     box-shadow: 0 2px 8px rgba(253, 241, 219, 0.15);
 }
 
-.aroma-select-btn:hover {
+.aroma-select-btn-mobile:hover {
     background: #f5e3c2;
     color: #111;
     border: 1px solid #e0cfa0;
@@ -468,7 +512,8 @@ body {
     background: #fdf1db;
     border: 1px solid #e0d2b8;
     border-radius: 10px;
-    box-shadow: 0 4px 24px 0 rgba(220, 180, 120, 0.13), 0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 24px 0 rgba(220, 180, 120, 0.13),
+        0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
     z-index: 200;
     min-width: 200px;
     padding: 10px 0;
@@ -806,6 +851,12 @@ body {
     font-weight: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     text-align: center;
+    width: 100%;
+    max-width: 600px;
+    /* Added width for overlay-text to help with p width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .overlay-text h1 {
@@ -820,12 +871,19 @@ body {
     font-family: Gilroy, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
+    max-width: 90%;
+    width: 420px;
+    margin: 0 auto;
+    /* Make the p longer in width and center it */
+    line-height: 1.7;
+    /* Improve readability */
+    margin-bottom: 0;
 }
 
 /* Button overlay */
 .second-button {
     position: absolute;
-    top: 60%;
+    top: auto;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 36px;
@@ -839,6 +897,13 @@ body {
     font-weight: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-top: 32px;
+    /* Add margin-top to separate from p */
+    position: absolute;
+    /* Keep absolute for overlay, but override top for margin */
+    /* We'll use bottom to place it below the p */
+    top: calc(50% + 70px);
+    /* Place below the overlay-text p, adjust as needed */
 }
 
 .second-button:hover {
@@ -939,11 +1004,15 @@ body {
 
     .overlay-text p {
         font-size: 12px;
+        width: 90vw;
+        max-width: 95vw;
     }
 
     .second-button {
         padding: 8px 20px;
         font-size: 10px;
+        margin-top: 20px;
+        top: calc(50% + 50px);
     }
 
     /* Responsive product image sizing */
@@ -1012,11 +1081,15 @@ body {
 
     .overlay-text p {
         font-size: 10px;
+        width: 95vw;
+        max-width: 98vw;
     }
 
     .second-button {
         padding: 6px 10px;
         font-size: 9px;
+        margin-top: 12px;
+        top: calc(50% + 30px);
     }
 
     .best-seller-badge {
@@ -1028,7 +1101,7 @@ body {
 
     /* Responsive product image sizing */
     .product-image {
-        width: 100px;
+        width: 50px;
         height: 70px;
     }
 
