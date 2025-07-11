@@ -107,7 +107,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: calc(100vh - 60px);
-
 }
 
 /* Hero Section */
@@ -146,7 +145,7 @@ body {
 
 /* Product Section */
 .product-section {
-    background-color: #fdf1dbe5;
+    background-color: #fdf1db;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,6 +153,7 @@ body {
     position: relative;
     padding: 40px;
     transition: all 0.3s ease;
+    border-left: 0.2px solid grey;
 }
 
 .best-seller-badge {
@@ -244,6 +244,7 @@ body {
     flex-direction: column;
     gap: 40px;
     overflow-y: auto;
+    border-left: 0.2px solid grey;
 }
 
 .fragrance-notes {
@@ -365,7 +366,6 @@ body {
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    /* Centers the button horizontally */
     padding: 10px 36px;
     font-size: 11px;
     background-color: transparent;
