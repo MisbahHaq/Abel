@@ -316,43 +316,32 @@ body {
 .perfume-guide {
     width: 100%;
     height: 80vh;
-    /* Keep the height as 80% of the viewport */
     position: relative;
-    /* Needed for absolute positioning of child elements */
 }
 
 .guide-img {
     width: 100%;
     height: 100%;
-    /* Fill the parent height */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Ensures no content overflows the image */
 }
 
 .guide-img img {
     width: 100%;
-    /* Ensures the image covers full width */
     height: 100%;
-    /* Ensures the image fills the full height */
     object-fit: cover;
-    /* Maintains aspect ratio */
 }
 
-/* Text overlay */
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Centers the text */
     color: rgba(245, 245, 245, 0.774);
-    /* Adjust the text size as needed */
     font-weight: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    /* Adds some contrast for readability */
     text-align: center;
 }
 
@@ -373,9 +362,7 @@ body {
 /* Button overlay */
 .second-button {
     position: absolute;
-    /* Absolute positioning for the button */
     top: 60%;
-    /* Adjust this to place the button at the right height */
     left: 50%;
     transform: translateX(-50%);
     /* Centers the button horizontally */
