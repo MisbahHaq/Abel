@@ -348,13 +348,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     /* Centers the text */
-    color: white;
-    font-size: 2rem;
+    color: rgba(245, 245, 245, 0.774);
     /* Adjust the text size as needed */
-    font-weight: bold;
+    font-weight: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     /* Adds some contrast for readability */
     text-align: center;
+}
+
+.overlay-text h1 {
+    font-size: 48px;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.overlay-text p {
+    font-size: 15px;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 /* Button overlay */
