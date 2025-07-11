@@ -128,6 +128,7 @@
       <button class="aroma-nav-item" data-aroma="SPICE">SPICE</button>
       <button class="aroma-nav-item" data-aroma="GOURMAND">GOURMAND</button>
     </div>
+
     <!-- Mobile Aroma Select Button -->
     <button class="aroma-select-btn-mobile" id="aromaSelectBtn">
       Select Aroma
@@ -228,7 +229,6 @@
         if (!window._abelShopScriptLoaded) {
           window._abelShopScriptLoaded = true;
 
-          // Use let/const only if not already defined
           if (typeof window.fragranceData === "undefined") {
             window.fragranceData = {
               AMBER: {
