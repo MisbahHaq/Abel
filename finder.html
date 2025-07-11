@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fragrance Finder</title>
+     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="finder.css">
+    <link rel="stylesheet" href="../Root CSS/footer.css" />
+    <link rel="stylesheet" href="../Root CSS/mediaquery.css" />
+    <link rel="stylesheet" href="../Root CSS/nav.css" />
+    <link rel="stylesheet" href="../Root CSS/root.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <nav class="navbar">
@@ -25,7 +35,7 @@
 
         <!-- Desktop Navigation - Right -->
         <div class="nav-menu nav-right">
-          <a href="#" class="nav-link">JOURNAL</a>
+          <a href="#" class="nav-link">FRAGRANCE FINDER</a>
 
           <!-- Currency Selector -->
           <button class="currency-btn">EUR</button>
@@ -94,7 +104,7 @@
           <a href="#" class="mobile-link">SETS</a>
           <a href="#" class="mobile-link">ABOUT</a>
           <div class="mobile-divider"></div>
-          <a href="#" class="mobile-link">JOURNAL</a>
+          <a href="#" class="mobile-link">FRAGRANCE FINDER</a>
           <div class="mobile-bottom">
             <button class="currency-btn">EUR</button>
             <div class="nav-icons">
@@ -145,5 +155,224 @@
         </div>
       </div>
     </nav>
+
+     <footer class="footer">
+    <div class="footer-columns">
+
+
+      <div class="footer-col newsletter">
+        <p class="desc">
+          Join the inner circle and get exclusive access to new products,
+          events and learn more about natural fragrance.
+        </p>
+        <div class="newsletter-input">
+          <input type="email" placeholder="Email" />
+          <button>&rarr;</button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li>CONTACT US</li>
+          <li>FAQ</li>
+          <li>PERFUME GUIDE</li>
+          <li>OUR STORY</li>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li>100% NATURAL</li>
+          <li>BIOTECHNOLOGY</li>
+          <li>CLEAN <BR>CRUELTY-FREE</BR></li>
+          <li>NON - TOXIC</li>
+          <li>PHTHALATE - FREE</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ABEL All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const body = document.body;
+
+      if (!mobileMenuBtn || !mobileMenu) {
+        console.warn("Mobile menu elements not found");
+        return;
+      }
+
+      mobileMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isActive = mobileMenu.classList.contains("active");
+
+        if (isActive) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      function openMobileMenu() {
+        mobileMenu.classList.add("active");
+        mobileMenuBtn.classList.add("active");
+        body.classList.add("menu-open");
+
+        mobileMenuBtn.setAttribute("aria-expanded", "true");
+        mobileMenu.setAttribute("aria-hidden", "false");
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("active");
+        mobileMenuBtn.classList.remove("active");
+        body.classList.remove("menu-open");
+
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+      }
+
+      document.addEventListener("click", function (event) {
+        const isClickInsideNav = event.target.closest(".navbar");
+        const isMenuOpen = mobileMenu.classList.contains("active");
+
+        if (!isClickInsideNav && isMenuOpen) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768 && mobileMenu.classList.contains("active")) {
+          closeMobileMenu();
+        }
+      });
+
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          if (mobileMenu.classList.contains("active")) {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            if (mobileMenu.classList.contains("active")) {
+              closeMobileMenu();
+            }
+          }
+        });
+      });
+
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      const handleScroll = debounce(function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 0) {
+          navbar.style.boxShadow =
+            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)";
+        } else {
+          navbar.style.boxShadow =
+            "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
+        }
+
+        lastScrollTop = scrollTop;
+      }, 10);
+
+      window.addEventListener("scroll", handleScroll);
+
+      const iconButtons = document.querySelectorAll(".icon-btn");
+
+      iconButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          this.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 150);
+
+          const svg = this.querySelector("svg");
+          if (svg) {
+            const viewBox = svg.getAttribute("viewBox");
+            if (viewBox === "0 0 24 24" && svg.querySelector('circle[cx="11"]')) {
+              console.log("Search clicked");
+            } else if (
+              viewBox === "0 0 24 24" &&
+              svg.querySelector('circle[cx="12"]')
+            ) {
+              console.log("User account clicked");
+            } else if (
+              viewBox === "0 0 24 24" &&
+              svg.querySelector('path[d*="M6 2L3 6v14"]')
+            ) {
+              console.log("Shopping bag clicked");
+            }
+          }
+        });
+      });
+
+      const currencyBtns = document.querySelectorAll(".currency-btn");
+      currencyBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          console.log("Currency selector clicked");
+        });
+      });
+
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      mobileMenuBtn.setAttribute("aria-controls", "mobile-menu");
+      mobileMenu.setAttribute("id", "mobile-menu");
+      mobileMenu.setAttribute("aria-hidden", "true");
+
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded");
+      });
+    });
+
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
+
+  </script>
   </body>
 </html>
