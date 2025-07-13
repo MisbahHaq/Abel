@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Mini</title>
+     <link rel="stylesheet" href="set.css" />
+  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="../Root CSS/footer.css" />
+  <link rel="stylesheet" href="../Root CSS/mediaquery.css" />
+  <link rel="stylesheet" href="../Root CSS/nav.css" />
+  <link rel="stylesheet" href="../Root CSS/root.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="./index.html">
+          <h1>Abel</h1>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation - Left -->
+      <div class="nav-menu nav-left">
+        <a href="./shop.html" class="nav-link">SHOP</a>
+        <a href="./sample.html" class="nav-link">SAMPLE</a>
+        <a href="#" class="nav-link">SETS</a>
+        <a href="#" class="nav-link">ABOUT</a>
+      </div>
+
+      <!-- Desktop Navigation - Right -->
+      <div class="nav-menu nav-right">
+        <a href="./finder.html" class="nav-link">FRAGRANCE FINDER</a>
+
+        <!-- Currency Selector -->
+        <button class="currency-btn">EUR</button>
+
+        <!-- Icons -->
+        <div class="nav-icons">
+          <button class="icon-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="User Account">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="Shopping Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <img src="./Images/images.png" alt="" />
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="#" class="mobile-link">SHOP</a>
+        <a href="#" class="mobile-link">SAMPLE</a>
+        <a href="#" class="mobile-link">SETS</a>
+        <a href="#" class="mobile-link">ABOUT</a>
+        <div class="mobile-divider"></div>
+        <a href="./finder.html" class="mobile-link">FRAGRANCE FINDER</a>
+        <div class="mobile-bottom">
+          <button class="currency-btn">EUR</button>
+          <div class="nav-icons">
+            <button class="icon-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="User Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="Shopping Bag">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+ <div class="container">
+        <!-- Left Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Perfume making background" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    BUILD YOUR OWN<br>
+                    PERFUME SET
+                </h1>
+            </div>
+        </section>
+
+        <!-- Right Product Section -->
+        <section class="product-section">
+            <div class="product-container">
+                <!-- Single Perfume Bottle -->
+                <div class="single-bottle-container">
+                    <div class="bottle">
+                        <img src="https://images.pexels.com/photos/1040173/pexels-photo-1040173.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Abel Perfume" class="bottle-image">
+                        <div class="bottle-label">Abel</div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h2 class="product-title">BUILD YOUR OWN PERFUME SET</h2>
+                    <p class="product-subtitle">Create Your Own Mini Set</p>
+                    <div class="product-price">€70</div>
+                    
+                    <button class="build-button" id="buildButton">
+                        BUILD YOUR OWN
+                    </button>
+                    
+                    <div class="payment-info">
+                        <span>OR 4 PAYMENTS OF €17.50 EUR WITH</span>
+                        <span class="afterpay">afterpay ◊</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Right Mood Section -->
+            <div class="mood-section">
+                <h3 class="mood-title">MOOD</h3>
+                <p class="mood-description">
+                    Curate your own fragrance wardrobe with a different scent to wear for each mood or occasion.
+                </p>
+                <button class="more-info-button">MORE INFO</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Second Section -->
+    <div class="container">
+        <!-- Left Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="./Images/amber-set.jpg">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    BUILD YOUR OWN<br>
+                    PERFUME SET
+                </h1>
+            </div>
+        </section>
+
+        <!-- Right Product Section -->
+        <section class="product-section">
+            <div class="product-container">
+                <!-- Single Perfume Bottle -->
+                <div class="single-bottle-container">
+                    <div class="bottle">
+                        <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Abel Perfume" class="bottle-image">
+                        <div class="bottle-label">Abel</div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h2 class="product-title">BUILD YOUR OWN PERFUME SET</h2>
+                    <p class="product-subtitle">Create Your Own Mini Set</p>
+                    <div class="product-price">€70</div>
+                    
+                    <button class="build-button" id="buildButton2">
+                        BUILD YOUR OWN
+                    </button>
+                    
+                    <div class="payment-info">
+                        <span>OR 4 PAYMENTS OF €17.50 EUR WITH</span>
+                        <span class="afterpay">afterpay ◊</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Right Mood Section -->
+            <div class="mood-section">
+                <h3 class="mood-title">MOOD</h3>
+                <p class="mood-description">
+                    Curate your own fragrance wardrobe with a different scent to wear for each mood or occasion.
+                </p>
+                <button class="more-info-button">MORE INFO</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Third Section -->
+    <div class="container">
+        <!-- Left Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Perfume making background" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    BUILD YOUR OWN<br>
+                    PERFUME SET
+                </h1>
+            </div>
+        </section>
+
+        <!-- Right Product Section -->
+        <section class="product-section">
+            <div class="product-container">
+                <!-- Single Perfume Bottle -->
+                <div class="single-bottle-container">
+                    <div class="bottle">
+                        <img src="./Images/amber-set.jpg"class="bottle-image">
+                        
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h2 class="product-title">BUILD YOUR OWN PERFUME SET</h2>
+                    <p class="product-subtitle">Create Your Own Mini Set</p>
+                    <div class="product-price">€70</div>
+                    
+                    <button class="build-button" id="buildButton3">
+                        BUILD YOUR OWN
+                    </button>
+                    
+                    <div class="payment-info">
+                        <span>OR 4 PAYMENTS OF €17.50 EUR WITH</span>
+                        <span class="afterpay">afterpay ◊</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Right Mood Section -->
+            <div class="mood-section">
+                <h3 class="mood-title">MOOD</h3>
+                <p class="mood-description">
+                    Curate your own fragrance wardrobe with a different scent to wear for each mood or occasion.
+                </p>
+                <button class="more-info-button">MORE INFO</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Customize Your Set</h2>
+                <button class="close-button" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p>Select up to 3 fragrances for your personalized perfume set:</p>
+                <div class="fragrance-list">
+                    <div class="fragrance-item">
+                        <input type="checkbox" id="golden" name="fragrance" value="golden">
+                        <label for="golden">Golden Hour - Warm & Luxurious</label>
+                    </div>
+                    <div class="fragrance-item">
+                        <input type="checkbox" id="natural" name="fragrance" value="natural">
+                        <label for="natural">Natural Essence - Fresh & Clean</label>
+                    </div>
+                    <div class="fragrance-item">
+                        <input type="checkbox" id="moonlight" name="fragrance" value="moonlight">
+                        <label for="moonlight">Moonlight - Mysterious & Elegant</label>
+                    </div>
+                </div>
+                <button class="add-to-cart-button">Add to Cart - €70</button>
+            </div>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-col newsletter">
+        <p class="desc">
+          Join the inner circle and get exclusive access to new products,
+          events and learn more about natural fragrance.
+        </p>
+        <div class="newsletter-input">
+          <input type="email" placeholder="Email" />
+          <button>&rarr;</button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li>CONTACT US</li>
+          <li>FAQ</li>
+          <li>PERFUME GUIDE</li>
+          <li>OUR STORY</li>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li>100% NATURAL</li>
+          <li>BIOTECHNOLOGY</li>
+          <li>CLEAN <BR>CRUELTY-FREE</BR></li>
+          <li>NON - TOXIC</li>
+          <li>PHTHALATE - FREE</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ABEL All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>// DOM Elements
+const buildButton = document.getElementById('buildButton');
+const buildButton2 = document.getElementById('buildButton2');
+const buildButton3 = document.getElementById('buildButton3');
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModal = document.getElementById('closeModal');
+const fragranceCheckboxes = document.querySelectorAll('input[name="fragrance"]');
+const addToCartButton = document.querySelector('.add-to-cart-button');
+const moreInfoButton = document.querySelector('.more-info-button');
+
+// State
+let selectedFragrances = [];
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    initializeEventListeners();
+    updateSelectedCount();
+    addInteractiveAnimations();
+});
+
+function initializeEventListeners() {
+    // Build button
+    buildButton.addEventListener('click', openModal);
+    buildButton2.addEventListener('click', openModal);
+    buildButton3.addEventListener('click', openModal);
+    
+    // Modal controls
+    closeModal.addEventListener('click', closeModalHandler);
+    modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) {
+            closeModalHandler();
+        }
+    });
+    
+    // Escape key to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModalHandler();
+        }
+    });
+    
+    // Fragrance selection
+    fragranceCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', handleFragranceSelection);
+    });
+    
+    // Add to cart
+    addToCartButton.addEventListener('click', handleAddToCart);
+    
+    // More info button
+    moreInfoButton.addEventListener('click', function() {
+        alert('More information about our perfume collection and customization process.');
+    });
+}
+
+function openModal() {
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModalHandler() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function handleFragranceSelection() {
+    selectedFragrances = Array.from(fragranceCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+    
+    updateSelectedCount();
+    
+    // Limit selection to 3
+    if (selectedFragrances.length >= 3) {
+        fragranceCheckboxes.forEach(checkbox => {
+            if (!checkbox.checked) {
+                checkbox.disabled = true;
+            }
+        });
+    } else {
+        fragranceCheckboxes.forEach(checkbox => {
+            checkbox.disabled = false;
+        });
+    }
+}
+
+function updateSelectedCount() {
+    const count = selectedFragrances.length;
+    const buttonText = count > 0 
+        ? `Add to Cart (${count}/3 selected) - €70`
+        : 'Add to Cart - €70';
+    
+    addToCartButton.textContent = buttonText;
+    addToCartButton.disabled = count === 0;
+    
+    if (count === 0) {
+        addToCartButton.style.opacity = '0.5';
+        addToCartButton.style.cursor = 'not-allowed';
+    } else {
+        addToCartButton.style.opacity = '1';
+        addToCartButton.style.cursor = 'pointer';
+    }
+}
+
+function handleAddToCart() {
+    if (selectedFragrances.length === 0) {
+        alert('Please select at least one fragrance.');
+        return;
+    }
+    
+    // Simulate add to cart
+    const fragranceNames = selectedFragrances.map(fragrance => {
+        const checkbox = document.getElementById(fragrance);
+        return checkbox.nextElementSibling.textContent;
+    });
+    
+    alert(`Added to cart:\n${fragranceNames.join('\n')}\n\nTotal: €70`);
+    closeModalHandler();
+    
+    // Reset selections
+    fragranceCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        checkbox.disabled = false;
+    });
+    selectedFragrances = [];
+    updateSelectedCount();
+}
+
+// Add interactive animations
+function addInteractiveAnimations() {
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.product-info, .mood-section, .single-bottle-container');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Bottle hover effects
+document.addEventListener('DOMContentLoaded', function() {
+    const bottles = document.querySelectorAll('.bottle');
+    
+    bottles.forEach(bottle => {
+        bottle.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.05)';
+        });
+        
+        bottle.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});</script>
+ 
+</body>
+</html>

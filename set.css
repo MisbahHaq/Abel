@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Hero Section */
+.hero-section {
+    flex: 1;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* Right Product Section */
+.product-section {
+    flex: 1;
+    background: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* Single Bottle Container */
+.single-bottle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.bottle {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.bottle img {
+  width: 250px;
+  height: auto;
+}
+
+.bottle:hover {
+    transform: translateY(-5px);
+}
+
+.bottle-image {
+    width: 120px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bottle:hover .bottle-image {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bottle-label {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Product Info */
+.product-info {
+    text-align: center;
+    max-width: 400px;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.product-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.product-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Build Button */
+.build-button {
+    width: 100%;
+    max-width: 300px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.build-button:hover {
+    background: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.payment-info {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.afterpay {
+    font-weight: 600;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Mood Section - Bottom Right */
+.mood-section {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    text-align: left;
+}
+
+.mood-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.mood-description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.more-info-button {
+    background: none;
+    border: 1px solid #333;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.more-info-button:hover {
+    background: #333;
+    color: white;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.fragrance-list {
+    margin-bottom: 2rem;
+}
+
+.fragrance-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.fragrance-item:hover {
+    background: #f8f8f8;
+}
+
+.fragrance-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #333;
+}
+
+.fragrance-item label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.add-to-cart-button:hover {
+    background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .hero-section {
+        min-height: 40vh;
+    }
+    
+    .product-section {
+        min-height: 60vh;
+    }
+    
+    .mood-section {
+        position: relative;
+        bottom: auto;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .bottle-image {
+        width: 90px;
+        height: 220px;
+    }
+    
+    .product-container {
+        padding: 2rem 1rem;
+    }
+    
+    .mood-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .product-title {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .product-price {
+        font-size: 1.8rem;
+    }
+    
+    .bottle-image {
+        width: 70px;
+        height: 180px;
+    }
+}
