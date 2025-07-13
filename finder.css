@@ -46,8 +46,8 @@
 
 .marquee-content {
     display: flex;
-    gap: 5rem; /* space between items */
-    animation: scroll-left 45s linear infinite;
+    gap: 5rem; 
+    animation: scroll-left 40s linear infinite;
     white-space: nowrap;
     will-change: transform;
 }
