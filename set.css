@@ -398,21 +398,13 @@ body {
 @media (max-width: 768px) {
     .bottle img {
         width: 50vw;
-        /* Make the bottle image bigger */
         max-width: none;
         height: auto;
-        /* Limit the max width */
         margin-bottom: 2rem;
-        /* Add spacing below the bottle */
     }
 
     .single-bottle-container {
         width: 100%;
-        /* Ensure the container is full width */
-
-        /* Override flex behavior */
-
-        /* Center the image */
     }
 
     .product-container {
@@ -453,8 +445,6 @@ body {
 
     .bottle img {
         width: 90vw;
-        /* Ensure bottle is visible */
-
         height: auto;
         max-width: none;
     }

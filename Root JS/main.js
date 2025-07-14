@@ -85,7 +85,7 @@ const products = [
         description: "A Verdant, Sun-Filled Citrus",
         price: "€30",
         category: "minis",
-        img1: "./Images/laundry-bg.jpg",
+        img1: "./Images/laundry-bg.webp",
         img2: "./Images/laundry-set-2.png",
         badge: "BEST SELLER",
     },
