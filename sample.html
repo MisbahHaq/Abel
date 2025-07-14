@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Mini</title>
-     <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Mini</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="../Root CSS/footer.css" />
   <link rel="stylesheet" href="../Root CSS/mediaquery.css" />
@@ -15,8 +16,9 @@
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <body>
+
   <nav class="navbar">
     <div class="nav-container">
       <!-- Logo -->
@@ -30,13 +32,12 @@
       <div class="nav-menu nav-left">
         <a href="./shop.html" class="nav-link">SHOP</a>
         <a href="./sample.html" class="nav-link">SAMPLE</a>
-        <a href="#" class="nav-link">SETS</a>
-        <a href="#" class="nav-link">ABOUT</a>
+        <a href="./set.html" class="nav-link">SETS</a>
+        <a href="./finder.html" class="nav-link">FRAGRANCE FINDER</a>
       </div>
 
       <!-- Desktop Navigation - Right -->
       <div class="nav-menu nav-right">
-        <a href="./finder.html" class="nav-link">FRAGRANCE FINDER</a>
 
         <!-- Currency Selector -->
         <button class="currency-btn">EUR</button>
@@ -67,7 +68,7 @@
 
       <!-- Mobile menu button -->
       <button class="mobile-menu-btn" aria-label="Toggle Menu">
-        <img src="./Images/images.png" alt="" />
+        <img src="Images/images.png" alt="" />
         <span class="hamburger"></span>
         <span class="hamburger"></span>
         <span class="hamburger"></span>
@@ -77,11 +78,9 @@
     <!-- Mobile Navigation Menu -->
     <div class="mobile-menu">
       <div class="mobile-menu-content">
-        <a href="#" class="mobile-link">SHOP</a>
-        <a href="#" class="mobile-link">SAMPLE</a>
-        <a href="#" class="mobile-link">SETS</a>
-        <a href="#" class="mobile-link">ABOUT</a>
-        <div class="mobile-divider"></div>
+        <a href="./shop.html" class="mobile-link">SHOP</a>
+        <a href="./sample.html" class="mobile-link">SAMPLE</a>
+        <a href="./set.html" class="mobile-link">SETS</a>
         <a href="./finder.html" class="mobile-link">FRAGRANCE FINDER</a>
         <div class="mobile-bottom">
           <button class="currency-btn">EUR</button>
@@ -219,287 +218,287 @@
   </div>
 
   <script>
-      // Prevent redeclaration of variables and functions in case of multiple script executions
-      (function () {
-        // Only define if not already defined
-        if (!window._abelShopScriptLoaded) {
-          window._abelShopScriptLoaded = true;
+    // Prevent redeclaration of variables and functions in case of multiple script executions
+    (function () {
+      // Only define if not already defined
+      if (!window._abelShopScriptLoaded) {
+        window._abelShopScriptLoaded = true;
 
-          if (typeof window.fragranceData === "undefined") {
-            window.fragranceData = {
-              AMBER: {
-                title: "THE APARTMENT ",
-                subtitle: "A Dark and Sophisticated Gourmand",
-                price: "€135",
-                image: "./Images/amber-mini.png",
-                heroImage: "./Images/amber-bg.jpg",
-                topNotes: "Tart Cherry, rum",
-                heartNotes: "Tuberose, Cacao, Jasmine",
-                baseNotes: "Myrrh, Tolu Balaam",
-                mood: "Haussmannian architecture. Light filtering through half-drawn velvet curtains. A cherry stained napkin.",
-              },
-              CITRUS: {
-                title: "CITRUS NORI",
-                subtitle: "A Sweet, Salty Musk.",
-                price: "€125",
-                image: "./Images/nori-mini.png",
-                heroImage: "./Images/nori-bg.jpg",
-                topNotes: "Tangerine, white peach",
-                heartNotes: "Plant derived musk",
-                baseNotes: "Nori",
-                mood: "Lazing on the beach after an ocean swim — sand on your skin, juice on your chin, an ocean breeze in your hair. Award-winning, best-selling Cyan Nori is a truly original and genderless aquatic scent.",
-              },
-              FLORAL: {
-                title: "GREEN CEDAR",
-                subtitle: "A Velvety, Rich Wood.",
-                price: "€135",
-                image: "./Images/cedar-mini.png",
-                heroImage: "./Images/cedar-bg.jpg",
-                topNotes: "Magnolia, cardamom",
-                heartNotes: "Cypriol, guaiac wood",
-                baseNotes: "Texas and atlas mountain cedar",
-                mood: "Walking through dense forest — tree-tops swaying in the wind, soft moss underfoot, fragrant sap dripping from branches overhead. Green Cedar is a genderless, woody scent both intoxicating and invigorating.",
-              },
-              WATER: {
-                title: "PINKIRIS",
-                subtitle: "A Sweet, Salty Musk.",
-                price: "€125",
-                image: "./Images/iris-mini.png",
-                heroImage: "./Images/scene2-bg.jpg",
-                topNotes: "Sichuan pepper, raspberry leaf, grapefruit, basil",
-                heartNotes: "Orris root (iris), rose, jasmine",
-                baseNotes: "Vanilla, musk",
-                mood: "Picking flowers in full sun — colours vivid in electric light, fragrant petals wilting in the relentless heat. Award-winning Pink Iris is a boldly sweet but spicy scent, a modern take on the classic floral.",
-              },
-              FRUIT: {
-                title: "LAUNDRY DAY",
-                subtitle: "A Verdant, Sun-Filled Citrus.",
-                price: "€125",
-                image: "./Images/iris-mini.png",
-                heroImage: "./Images/lan.jpg",
-                topNotes: "Cut grass, aldehydes",
-                heartNotes: "Lime, passionfruit",
-                baseNotes: "Vetiver",
-                mood: "The first day of spring — hanging freshly washed sheets on the washing line with cut grass underfoot, a clear blue sky overhead, and a glaring sun filling your vision with halos. Laundry Day evokes the uplifting energy and freshness of spring, year-round. ",
-              },
-              GREEN: {
-                title: "LAUNDRY DAY",
-                subtitle: "A Verdant, Sun-Filled Citrus.",
-                price: "€125",
-                image: "./Images/nurture-mini.png",
-                heroImage: "./Images/scene1-bg.jpg",
-                topNotes: "Cut grass, aldehydes",
-                heartNotes: "Lime, passionfruit",
-                baseNotes: "Vetiver",
-                mood: "The first day of spring — hanging freshly washed sheets on the washing line with cut grass underfoot, a clear blue sky overhead, and a glaring sun filling your vision with halos. Laundry Day evokes the uplifting energy and freshness of spring, year-round. ",
-              },
-              MUSK: {
-                title: "NURTURE",
-                subtitle: "A Soft, Floral Musk.",
-                price: "€145",
-                image: "./Images/nurture-mini.png",
-                heroImage: "./Images/scene1-bg.jpg",
-                topNotes: "Sichuan pepper, raspberry leaf, grapefruit, basil",
-                heartNotes: "Orris root (iris), rose, jasmine",
-                baseNotes: "Vanilla, musk",
-                mood: "Picking flowers in full sun — colours vivid in electric light, fragrant petals wilting in the relentless heat. Award-winning Pink Iris is a boldly sweet but spicy scent, a modern take on the classic floral.",
-              },
-              WOOD: {
-                title: "PAUSE",
-                subtitle: "A Confident, Textured Floral.",
-                price: "€145",
-                image: "./Images/pause-mini.png",
-                heroImage: "./Images/pause-bg.jpg",
-                topNotes: "Violet leaf",
-                heartNotes: "Mimosa, narcissus",
-                baseNotes: "Hay absolute",
-                mood: "Stillness after warm summer rain—a collective quiet, the smell of wet earth filling the air. Award-winning Pause was created as a tribute to the seasons of hormonal change.",
-              },
-              SPICE: {
-                title: "BLACK ANISE",
-                subtitle: "A Vibrant, Smokey Amber.",
-                price: "€145",
-                image: "./Images/anise-mini.png",
-                heroImage: "./Images/anise-bg.jpg",
-                topNotes: "Pink pepper, cardamom, juniper berry",
-                heartNotes: "Cacao, tonka, peru balsam",
-                baseNotes: "Amber",
-                mood: "A cosy night in cold weather — curtains closed, fireplace crackling, a frosted glass of your favourite drink nearby. Cobalt Amber is a luxurious, sophisticated evening scent.",
-              },
-              GOURMAND: {
-                title: "COLT AMBER",
-                subtitle: "A Chic, Sultry Amber.",
-                price: "€145",
-                image: "./Images/amber-mini.png",
-                heroImage: "./Images/bg16.jpg",
-                topNotes: "Pink pepper, cardamom, juniper berry",
-                heartNotes: "Cacao, tonka, peru balsam",
-                baseNotes: "Amber",
-                mood: "A cosy night in cold weather — curtains closed, fireplace crackling, a frosted glass of your favourite drink nearby. Cobalt Amber is a luxurious, sophisticated evening scent.",
-              },
-            };
-          }
-
-          // Use variables from window scope to avoid redeclaration
-          var fragranceData = window.fragranceData;
-
-          // Only define these variables if not already defined
-          if (typeof window._abelShopAromaSelectBtn === "undefined") {
-            window._abelShopAromaSelectBtn =
-              document.getElementById("aromaSelectBtn");
-          }
-          if (typeof window._abelShopAromaDropdown === "undefined") {
-            window._abelShopAromaDropdown =
-              document.getElementById("aromaDropdown");
-          }
-          if (typeof window._abelShopDropdownOpen === "undefined") {
-            window._abelShopDropdownOpen = false;
-          }
-
-          var aromaSelectBtn = window._abelShopAromaSelectBtn;
-          var aromaDropdown = window._abelShopAromaDropdown;
-          var dropdownOpen = window._abelShopDropdownOpen;
-
-          // Only define the function if not already defined
-          if (
-            typeof window._abelShopCloseDropdownOnOutsideClick !== "function"
-          ) {
-            window._abelShopCloseDropdownOnOutsideClick = function (e) {
-              if (
-                !aromaDropdown.contains(e.target) &&
-                e.target !== aromaSelectBtn
-              ) {
-                aromaDropdown.classList.remove("show");
-                dropdownOpen = false;
-                window._abelShopDropdownOpen = false;
-                document.removeEventListener(
-                  "mousedown",
-                  window._abelShopCloseDropdownOnOutsideClick
-                );
-              }
-            };
-          }
-          var closeDropdownOnOutsideClick =
-            window._abelShopCloseDropdownOnOutsideClick;
-
-          // Aroma dropdown logic (mobile)
-          if (aromaSelectBtn && !aromaSelectBtn._abelShopListenerAdded) {
-            aromaSelectBtn.addEventListener("click", function () {
-              dropdownOpen = !dropdownOpen;
-              window._abelShopDropdownOpen = dropdownOpen;
-              if (dropdownOpen) {
-                aromaDropdown.classList.add("show");
-                document.addEventListener(
-                  "mousedown",
-                  closeDropdownOnOutsideClick
-                );
-              } else {
-                aromaDropdown.classList.remove("show");
-                document.removeEventListener(
-                  "mousedown",
-                  closeDropdownOnOutsideClick
-                );
-              }
-            });
-            aromaSelectBtn._abelShopListenerAdded = true;
-          }
-
-          if (aromaDropdown && !aromaDropdown._abelShopListenerAdded) {
-            aromaDropdown
-              .querySelectorAll(".aroma-dropdown-item")
-              .forEach(function (item) {
-                if (!item._abelShopListenerAdded) {
-                  item.addEventListener("click", function () {
-                    var key = item.getAttribute("data-aroma");
-                    var data = fragranceData[key];
-                    if (!data) return;
-                    updateFragranceContent(data, key);
-                    aromaDropdown.classList.remove("show");
-                    dropdownOpen = false;
-                    window._abelShopDropdownOpen = false;
-                    document.removeEventListener(
-                      "mousedown",
-                      closeDropdownOnOutsideClick
-                    );
-                  });
-                  item._abelShopListenerAdded = true;
-                }
-              });
-            aromaDropdown._abelShopListenerAdded = true;
-          }
-
-          // Desktop aroma nav logic
-          if (!window._abelShopDesktopNavListenerAdded) {
-            document
-              .querySelectorAll(".aroma-nav-desktop .aroma-nav-item")
-              .forEach(function (btn) {
-                if (!btn._abelShopListenerAdded) {
-                  btn.addEventListener("click", function () {
-                    var key = btn.getAttribute("data-aroma");
-                    var data = fragranceData[key];
-                    if (!data) return;
-                    updateFragranceContent(data, key);
-                    // Set active class
-                    document
-                      .querySelectorAll(".aroma-nav-desktop .aroma-nav-item")
-                      .forEach(function (b) {
-                        b.classList.toggle("active", b === btn);
-                      });
-                  });
-                  btn._abelShopListenerAdded = true;
-                }
-              });
-            window._abelShopDesktopNavListenerAdded = true;
-          }
-
-          // Only define updateFragranceContent if not already defined
-          if (typeof window.updateFragranceContent !== "function") {
-            window.updateFragranceContent = function (data, key) {
-              document.querySelector(".product-title").textContent = data.title;
-              document.querySelector(".product-subtitle").textContent =
-                data.subtitle;
-              document.querySelector(".product-price").textContent = data.price;
-              document.querySelector(".product-image img").src = data.image;
-              document.querySelector(".hero-image img").src = data.heroImage;
-              document.querySelector(".hero-title").textContent = data.title;
-              var rows = document.querySelectorAll(
-                ".fragrance-notes .notes-row"
-              );
-              if (rows.length >= 3) {
-                rows[0].querySelector(".note-description").innerHTML =
-                  data.topNotes;
-                rows[1].querySelector(".note-description").innerHTML =
-                  data.heartNotes;
-                rows[2].querySelector(".note-description").innerHTML =
-                  data.baseNotes;
-              }
-              document.querySelector(".mood-description").textContent =
-                data.mood;
-            };
-          }
-          var updateFragranceContent = window.updateFragranceContent;
-
-          // DOMContentLoaded logic
-          if (!window._abelShopDOMContentLoadedListenerAdded) {
-            window.addEventListener("DOMContentLoaded", function () {
-              var defaultKey = "AMBER";
-              var defaultData = fragranceData[defaultKey];
-              if (!defaultData) return;
-
-              updateFragranceContent(defaultData, defaultKey);
-
-              // Set active on desktop nav for default
-              var defaultBtn = document.querySelector(
-                '.aroma-nav-desktop .aroma-nav-item[data-aroma="' +
-                  defaultKey +
-                  '"]'
-              );
-              if (defaultBtn) defaultBtn.classList.add("active");
-            });
-            window._abelShopDOMContentLoadedListenerAdded = true;
-          }
+        if (typeof window.fragranceData === "undefined") {
+          window.fragranceData = {
+            AMBER: {
+              title: "THE APARTMENT ",
+              subtitle: "A Dark and Sophisticated Gourmand",
+              price: "€135",
+              image: "./Images/amber-mini.png",
+              heroImage: "./Images/amber-bg.jpg",
+              topNotes: "Tart Cherry, rum",
+              heartNotes: "Tuberose, Cacao, Jasmine",
+              baseNotes: "Myrrh, Tolu Balaam",
+              mood: "Haussmannian architecture. Light filtering through half-drawn velvet curtains. A cherry stained napkin.",
+            },
+            CITRUS: {
+              title: "CITRUS NORI",
+              subtitle: "A Sweet, Salty Musk.",
+              price: "€125",
+              image: "./Images/nori-mini.png",
+              heroImage: "./Images/nori-bg.jpg",
+              topNotes: "Tangerine, white peach",
+              heartNotes: "Plant derived musk",
+              baseNotes: "Nori",
+              mood: "Lazing on the beach after an ocean swim — sand on your skin, juice on your chin, an ocean breeze in your hair. Award-winning, best-selling Cyan Nori is a truly original and genderless aquatic scent.",
+            },
+            FLORAL: {
+              title: "GREEN CEDAR",
+              subtitle: "A Velvety, Rich Wood.",
+              price: "€135",
+              image: "./Images/cedar-mini.png",
+              heroImage: "./Images/cedar-bg.jpg",
+              topNotes: "Magnolia, cardamom",
+              heartNotes: "Cypriol, guaiac wood",
+              baseNotes: "Texas and atlas mountain cedar",
+              mood: "Walking through dense forest — tree-tops swaying in the wind, soft moss underfoot, fragrant sap dripping from branches overhead. Green Cedar is a genderless, woody scent both intoxicating and invigorating.",
+            },
+            WATER: {
+              title: "PINKIRIS",
+              subtitle: "A Sweet, Salty Musk.",
+              price: "€125",
+              image: "./Images/iris-mini.png",
+              heroImage: "./Images/scene2-bg.jpg",
+              topNotes: "Sichuan pepper, raspberry leaf, grapefruit, basil",
+              heartNotes: "Orris root (iris), rose, jasmine",
+              baseNotes: "Vanilla, musk",
+              mood: "Picking flowers in full sun — colours vivid in electric light, fragrant petals wilting in the relentless heat. Award-winning Pink Iris is a boldly sweet but spicy scent, a modern take on the classic floral.",
+            },
+            FRUIT: {
+              title: "LAUNDRY DAY",
+              subtitle: "A Verdant, Sun-Filled Citrus.",
+              price: "€125",
+              image: "./Images/iris-mini.png",
+              heroImage: "./Images/lan.jpg",
+              topNotes: "Cut grass, aldehydes",
+              heartNotes: "Lime, passionfruit",
+              baseNotes: "Vetiver",
+              mood: "The first day of spring — hanging freshly washed sheets on the washing line with cut grass underfoot, a clear blue sky overhead, and a glaring sun filling your vision with halos. Laundry Day evokes the uplifting energy and freshness of spring, year-round. ",
+            },
+            GREEN: {
+              title: "LAUNDRY DAY",
+              subtitle: "A Verdant, Sun-Filled Citrus.",
+              price: "€125",
+              image: "./Images/nurture-mini.png",
+              heroImage: "./Images/scene1-bg.jpg",
+              topNotes: "Cut grass, aldehydes",
+              heartNotes: "Lime, passionfruit",
+              baseNotes: "Vetiver",
+              mood: "The first day of spring — hanging freshly washed sheets on the washing line with cut grass underfoot, a clear blue sky overhead, and a glaring sun filling your vision with halos. Laundry Day evokes the uplifting energy and freshness of spring, year-round. ",
+            },
+            MUSK: {
+              title: "NURTURE",
+              subtitle: "A Soft, Floral Musk.",
+              price: "€145",
+              image: "./Images/nurture-mini.png",
+              heroImage: "./Images/scene1-bg.jpg",
+              topNotes: "Sichuan pepper, raspberry leaf, grapefruit, basil",
+              heartNotes: "Orris root (iris), rose, jasmine",
+              baseNotes: "Vanilla, musk",
+              mood: "Picking flowers in full sun — colours vivid in electric light, fragrant petals wilting in the relentless heat. Award-winning Pink Iris is a boldly sweet but spicy scent, a modern take on the classic floral.",
+            },
+            WOOD: {
+              title: "PAUSE",
+              subtitle: "A Confident, Textured Floral.",
+              price: "€145",
+              image: "./Images/pause-mini.png",
+              heroImage: "./Images/pause-bg.jpg",
+              topNotes: "Violet leaf",
+              heartNotes: "Mimosa, narcissus",
+              baseNotes: "Hay absolute",
+              mood: "Stillness after warm summer rain—a collective quiet, the smell of wet earth filling the air. Award-winning Pause was created as a tribute to the seasons of hormonal change.",
+            },
+            SPICE: {
+              title: "BLACK ANISE",
+              subtitle: "A Vibrant, Smokey Amber.",
+              price: "€145",
+              image: "./Images/anise-mini.png",
+              heroImage: "./Images/anise-bg.jpg",
+              topNotes: "Pink pepper, cardamom, juniper berry",
+              heartNotes: "Cacao, tonka, peru balsam",
+              baseNotes: "Amber",
+              mood: "A cosy night in cold weather — curtains closed, fireplace crackling, a frosted glass of your favourite drink nearby. Cobalt Amber is a luxurious, sophisticated evening scent.",
+            },
+            GOURMAND: {
+              title: "COLT AMBER",
+              subtitle: "A Chic, Sultry Amber.",
+              price: "€145",
+              image: "./Images/amber-mini.png",
+              heroImage: "./Images/bg16.jpg",
+              topNotes: "Pink pepper, cardamom, juniper berry",
+              heartNotes: "Cacao, tonka, peru balsam",
+              baseNotes: "Amber",
+              mood: "A cosy night in cold weather — curtains closed, fireplace crackling, a frosted glass of your favourite drink nearby. Cobalt Amber is a luxurious, sophisticated evening scent.",
+            },
+          };
         }
-      })();
+
+        // Use variables from window scope to avoid redeclaration
+        var fragranceData = window.fragranceData;
+
+        // Only define these variables if not already defined
+        if (typeof window._abelShopAromaSelectBtn === "undefined") {
+          window._abelShopAromaSelectBtn =
+            document.getElementById("aromaSelectBtn");
+        }
+        if (typeof window._abelShopAromaDropdown === "undefined") {
+          window._abelShopAromaDropdown =
+            document.getElementById("aromaDropdown");
+        }
+        if (typeof window._abelShopDropdownOpen === "undefined") {
+          window._abelShopDropdownOpen = false;
+        }
+
+        var aromaSelectBtn = window._abelShopAromaSelectBtn;
+        var aromaDropdown = window._abelShopAromaDropdown;
+        var dropdownOpen = window._abelShopDropdownOpen;
+
+        // Only define the function if not already defined
+        if (
+          typeof window._abelShopCloseDropdownOnOutsideClick !== "function"
+        ) {
+          window._abelShopCloseDropdownOnOutsideClick = function (e) {
+            if (
+              !aromaDropdown.contains(e.target) &&
+              e.target !== aromaSelectBtn
+            ) {
+              aromaDropdown.classList.remove("show");
+              dropdownOpen = false;
+              window._abelShopDropdownOpen = false;
+              document.removeEventListener(
+                "mousedown",
+                window._abelShopCloseDropdownOnOutsideClick
+              );
+            }
+          };
+        }
+        var closeDropdownOnOutsideClick =
+          window._abelShopCloseDropdownOnOutsideClick;
+
+        // Aroma dropdown logic (mobile)
+        if (aromaSelectBtn && !aromaSelectBtn._abelShopListenerAdded) {
+          aromaSelectBtn.addEventListener("click", function () {
+            dropdownOpen = !dropdownOpen;
+            window._abelShopDropdownOpen = dropdownOpen;
+            if (dropdownOpen) {
+              aromaDropdown.classList.add("show");
+              document.addEventListener(
+                "mousedown",
+                closeDropdownOnOutsideClick
+              );
+            } else {
+              aromaDropdown.classList.remove("show");
+              document.removeEventListener(
+                "mousedown",
+                closeDropdownOnOutsideClick
+              );
+            }
+          });
+          aromaSelectBtn._abelShopListenerAdded = true;
+        }
+
+        if (aromaDropdown && !aromaDropdown._abelShopListenerAdded) {
+          aromaDropdown
+            .querySelectorAll(".aroma-dropdown-item")
+            .forEach(function (item) {
+              if (!item._abelShopListenerAdded) {
+                item.addEventListener("click", function () {
+                  var key = item.getAttribute("data-aroma");
+                  var data = fragranceData[key];
+                  if (!data) return;
+                  updateFragranceContent(data, key);
+                  aromaDropdown.classList.remove("show");
+                  dropdownOpen = false;
+                  window._abelShopDropdownOpen = false;
+                  document.removeEventListener(
+                    "mousedown",
+                    closeDropdownOnOutsideClick
+                  );
+                });
+                item._abelShopListenerAdded = true;
+              }
+            });
+          aromaDropdown._abelShopListenerAdded = true;
+        }
+
+        // Desktop aroma nav logic
+        if (!window._abelShopDesktopNavListenerAdded) {
+          document
+            .querySelectorAll(".aroma-nav-desktop .aroma-nav-item")
+            .forEach(function (btn) {
+              if (!btn._abelShopListenerAdded) {
+                btn.addEventListener("click", function () {
+                  var key = btn.getAttribute("data-aroma");
+                  var data = fragranceData[key];
+                  if (!data) return;
+                  updateFragranceContent(data, key);
+                  // Set active class
+                  document
+                    .querySelectorAll(".aroma-nav-desktop .aroma-nav-item")
+                    .forEach(function (b) {
+                      b.classList.toggle("active", b === btn);
+                    });
+                });
+                btn._abelShopListenerAdded = true;
+              }
+            });
+          window._abelShopDesktopNavListenerAdded = true;
+        }
+
+        // Only define updateFragranceContent if not already defined
+        if (typeof window.updateFragranceContent !== "function") {
+          window.updateFragranceContent = function (data, key) {
+            document.querySelector(".product-title").textContent = data.title;
+            document.querySelector(".product-subtitle").textContent =
+              data.subtitle;
+            document.querySelector(".product-price").textContent = data.price;
+            document.querySelector(".product-image img").src = data.image;
+            document.querySelector(".hero-image img").src = data.heroImage;
+            document.querySelector(".hero-title").textContent = data.title;
+            var rows = document.querySelectorAll(
+              ".fragrance-notes .notes-row"
+            );
+            if (rows.length >= 3) {
+              rows[0].querySelector(".note-description").innerHTML =
+                data.topNotes;
+              rows[1].querySelector(".note-description").innerHTML =
+                data.heartNotes;
+              rows[2].querySelector(".note-description").innerHTML =
+                data.baseNotes;
+            }
+            document.querySelector(".mood-description").textContent =
+              data.mood;
+          };
+        }
+        var updateFragranceContent = window.updateFragranceContent;
+
+        // DOMContentLoaded logic
+        if (!window._abelShopDOMContentLoadedListenerAdded) {
+          window.addEventListener("DOMContentLoaded", function () {
+            var defaultKey = "AMBER";
+            var defaultData = fragranceData[defaultKey];
+            if (!defaultData) return;
+
+            updateFragranceContent(defaultData, defaultKey);
+
+            // Set active on desktop nav for default
+            var defaultBtn = document.querySelector(
+              '.aroma-nav-desktop .aroma-nav-item[data-aroma="' +
+              defaultKey +
+              '"]'
+            );
+            if (defaultBtn) defaultBtn.classList.add("active");
+          });
+          window._abelShopDOMContentLoadedListenerAdded = true;
+        }
+      }
+    })();
   </script>
 
   <footer class="footer">
@@ -1176,5 +1175,7 @@
 
 
   </script>
+
 </body>
+
 </html>
