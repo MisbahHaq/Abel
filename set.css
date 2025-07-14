@@ -98,11 +98,12 @@ body {
 .bottle {
     position: relative;
     transition: all 0.3s ease;
+    margin-bottom: 150px;
 }
 
 .bottle img {
-  width: 250px;
-  height: auto;
+    width: 450px;
+    height: auto;
 }
 
 .bottle:hover {
@@ -283,6 +284,7 @@ body {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -374,15 +376,15 @@ body {
     .container {
         flex-direction: column;
     }
-    
+
     .hero-section {
         min-height: 40vh;
     }
-    
+
     .product-section {
         min-height: 60vh;
     }
-    
+
     .mood-section {
         position: relative;
         bottom: auto;
@@ -395,11 +397,11 @@ body {
         width: 90px;
         height: 220px;
     }
-    
+
     .product-container {
         padding: 2rem 1rem;
     }
-    
+
     .mood-section {
         padding: 1.5rem;
     }
@@ -410,16 +412,16 @@ body {
         font-size: 2rem;
         letter-spacing: 2px;
     }
-    
+
     .product-title {
         font-size: 1.1rem;
         letter-spacing: 1px;
     }
-    
+
     .product-price {
         font-size: 1.8rem;
     }
-    
+
     .bottle-image {
         width: 70px;
         height: 180px;
