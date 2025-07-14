@@ -535,6 +535,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });</script>
+
+ <script>
+  const boxes = document.querySelectorAll('.box');
+  const contents = document.querySelectorAll('.content');
+
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      boxes.forEach(b => b.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      box.classList.add('active');
+      const target = box.getAttribute('data-content');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+  </script>
+
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+  <script>
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
+  </script>
+  
+  <script src="../Root JS/script.js"></script>
+
+  <script src="../Root JS/main.js"></script>
+
+  <script src="../Root JS/product.js"></script>
  
 </body>
 </html>
