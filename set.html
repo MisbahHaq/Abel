@@ -18,6 +18,29 @@
 </head>
 
 <body>
+  
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD1XRjbweJKfkJZvl83bWLxOE-46V112Fs",
+    authDomain: "abel-16903.firebaseapp.com",
+    projectId: "abel-16903",
+    appId: "Y1:672303558470:web:beba2772f0b8682ed4ff47"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // Redirect if not logged in
+      window.location.href = '/auth.html';
+    }
+  });
+</script>
+
 
     <nav class="navbar">
       <div class="nav-container">

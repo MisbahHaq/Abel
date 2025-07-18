@@ -227,6 +227,110 @@
 
     <script src="../Root JS/product.js"></script>
 
+    <script>
+        // auth.js
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            sendPasswordResetEmail,
+            onAuthStateChanged,
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+        import {
+            getFirestore,
+            doc,
+            setDoc,
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+        // Your Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyD1XRjbweJKfkJZvl83bWLxOE-46V112Fs",
+            authDomain: "abel-16903.firebaseapp.com",
+            projectId: "abel-16903",
+            appId: "Y1:672303558470:web:beba2772f0b8682ed4ff47",
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // DOM Elements
+        const authForm = document.getElementById("auth-form");
+        const formTitle = document.getElementById("form-title");
+        const formDesc = document.getElementById("form-desc");
+        const toggleLink = document.getElementById("toggle-link");
+        const switchToLogin = document.getElementById("switch-to-login");
+        const resetLink = document.getElementById("reset-link");
+        const submitBtn = document.getElementById("submit-btn");
+        const signupNames = document.getElementById("signup-names");
+
+        // Track mode
+        let isSignup = true;
+
+        // Toggle Login/Signup UI
+        switchToLogin.addEventListener("click", () => {
+            isSignup = !isSignup;
+            formTitle.textContent = isSignup ? "SIGN UP" : "SIGN IN";
+            formDesc.textContent = isSignup
+                ? "Welcome. To create an account, please complete the form below."
+                : "Welcome back. Please sign in to your account.";
+            submitBtn.textContent = isSignup ? "CREATE ACCOUNT" : "SIGN IN";
+            switchToLogin.textContent = isSignup ? "SIGN IN" : "CREATE ACCOUNT";
+            resetLink.classList.toggle("hide", isSignup);
+            signupNames.style.display = isSignup ? "flex" : "none";
+        });
+
+        // Reset password
+        resetLink.addEventListener("click", async () => {
+            const email = document.getElementById("email").value;
+            if (!email) return alert("Please enter your email first.");
+            try {
+                await sendPasswordResetEmail(auth, email);
+                alert("Password reset email sent!");
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+
+        // Form submit
+        authForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const firstName = document.getElementById("firstName")?.value.trim();
+            const lastName = document.getElementById("lastName")?.value.trim();
+
+            try {
+                if (isSignup) {
+                    // Sign up
+                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                    const user = userCredential.user;
+
+                    // Save to Firestore
+                    await setDoc(doc(db, "users", user.uid), {
+                        firstName,
+                        lastName,
+                        email,
+                        createdAt: new Date(),
+                    });
+
+                    alert("Account created!");
+                } else {
+                    // Log in
+                    await signInWithEmailAndPassword(auth, email, password);
+                    alert("Signed in!");
+                }
+
+                // Redirect after auth
+                window.location.href = "./index.html";
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
