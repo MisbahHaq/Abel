@@ -202,6 +202,7 @@ function handleQuickAdd(e) {
 
     if (product) {
         cart.push(product);
+        saveToFirestoreCart(product);
         e.target.textContent = "ADDED!";
         e.target.style.background = "#4CAF50";
         e.target.style.color = "white";
