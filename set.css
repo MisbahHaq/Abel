@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;

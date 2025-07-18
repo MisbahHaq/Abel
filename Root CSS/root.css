@@ -28,6 +28,8 @@
     --transition: 0.3s ease-in-out;
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
 @font-face {
     font-family: "Gilroy";
     src: url("./Fonts/Gilroy-Light.otf");

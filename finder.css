@@ -4,6 +4,8 @@
     display: flex;
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
 .left {
     width: 50%;
 }
@@ -27,7 +29,7 @@
     margin-left: 10%;
     width: 27%;
     font-weight: normal;
-    text-align: left; 
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -46,7 +48,7 @@
 
 .marquee-content {
     display: flex;
-    gap: 5rem; 
+    gap: 5rem;
     animation: scroll-left 40s linear infinite;
     white-space: nowrap;
     will-change: transform;
@@ -56,6 +58,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }

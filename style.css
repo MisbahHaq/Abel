@@ -130,6 +130,8 @@ body {
     background-color: rgba(253, 241, 219, 0.897);
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
 .second-right h1,
 .second-right p {
     margin: 0 0 20px 0;

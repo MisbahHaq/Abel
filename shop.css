@@ -9,6 +9,8 @@
     src: url("./Gilroy-Light.otf");
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
 @font-face {
     font-family: "Gilroy Bold";
     src: url("./Gilroy-ExtraBold.otf");
