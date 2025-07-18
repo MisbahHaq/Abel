@@ -1,0 +1,122 @@
+/* Reset defaults if needed */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fcfbf7;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Center the form-wrapper and give padding from navbar */
+.form-wrapper {
+    max-width: 400px;
+    margin: 6rem auto 4rem auto;
+    /* top space for nav, bottom space before footer */
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+#form-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* Form and inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#signup-names {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#signup-names input {
+    flex: 1;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #222;
+    background-color: transparent;
+    padding: 0.75rem 0;
+    font-size: 14px;
+    outline: none;
+    color: #000;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Button styling */
+button#submit-btn {
+    background: #2e2e2e;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button#submit-btn:hover {
+    background: #000;
+}
+
+/* Footer text (below form) */
+.form-footer {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.form-footer span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+/* Footer margin fix */
+footer.footer {
+    margin-top: auto;
+}
+
+@media (max-width: 480px) {
+    #signup-names {
+        flex-direction: column;
+    }
+
+    .form-wrapper {
+        margin: 5rem 1rem 3rem;
+    }
+}

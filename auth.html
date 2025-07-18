@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login / Signup - Abel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="auth.css" />
+    <script type="module" src="auth.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Root CSS/footer.css" />
+    <link rel="stylesheet" href="../Root CSS/mediaquery.css" />
+    <link rel="stylesheet" href="../Root CSS/nav.css" />
+    <link rel="stylesheet" href="../Root CSS/root.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="./index.html">
+                    <h1>Abel</h1>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation - Left -->
+            <div class="nav-menu nav-left">
+                <a href="./shop.html" class="nav-link">SHOP</a>
+                <a href="./sample.html" class="nav-link">SAMPLE</a>
+                <a href="./set.html" class="nav-link">SETS</a>
+                <a href="./finder.html" class="nav-link">FRAGRANCE FINDER</a>
+            </div>
+
+            <!-- Desktop Navigation - Right -->
+            <div class="nav-menu nav-right">
+                <!-- Currency Selector -->
+                <button class="currency-btn">EUR</button>
+
+                <!-- Icons -->
+                <div class="nav-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="User Account" onclick="window.location.href='auth.html'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Shopping Bag">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <img src="Images/images.png" alt="" />
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="./shop.html" class="mobile-link">SHOP</a>
+                <a href="./sample.html" class="mobile-link">SAMPLE</a>
+                <a href="./set.html" class="mobile-link">SETS</a>
+                <a href="./finder.html" class="mobile-link">FRAGRANCE FINDER</a>
+                <div class="mobile-bottom">
+                    <button class="currency-btn">EUR</button>
+                    <div class="nav-icons">
+                        <button class="icon-btn" aria-label="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn" aria-label="User Account">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+                        <button class="icon-btn" aria-label="Shopping Bag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-wrapper">
+        <h1 id="form-title">SIGN UP</h1>
+        <p id="form-desc">
+            Welcome. To create an account, please complete the form below, then
+            follow the prompts.
+        </p>
+
+        <form id="auth-form">
+            <div id="signup-names">
+                <input type="text" id="firstName" placeholder="First Name" />
+                <input type="text" id="lastName" placeholder="Last Name" />
+            </div>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit" id="submit-btn">CREATE ACCOUNT</button>
+        </form>
+
+        <div class="form-footer">
+            <p id="toggle-link">
+                ALREADY HAVE AN ACCOUNT? <span id="switch-to-login">SIGN IN</span>
+            </p>
+            <p id="reset-link" class="hide">RESET PASSWORD</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-col newsletter">
+                <p class="desc">
+                    Join the inner circle and get exclusive access to new products,
+                    events and learn more about natural fragrance.
+                </p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email" />
+                    <button>&rarr;</button>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <ul>
+                    <li>CONTACT US</li>
+                    <li>FAQ</li>
+                    <li>PERFUME GUIDE</li>
+                    <li>OUR STORY</li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <ul>
+                    <li>100% NATURAL</li>
+                    <li>BIOTECHNOLOGY</li>
+                    <li>CLEAN <BR>CRUELTY-FREE</BR></li>
+                    <li>NON - TOXIC</li>
+                    <li>PHTHALATE - FREE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© ABEL All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const productBoxes = document.querySelectorAll('.product-box');
+        const paginationItems = document.querySelectorAll('.pagination span');
+        document.querySelector('.product-types').addEventListener('scroll', () => {
+            const container = document.querySelector('.product-types');
+            const scrollLeft = container.scrollLeft;
+            const width = container.offsetWidth;
+            const index = Math.round(scrollLeft / width);
+            paginationItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+                item.textContent = i === index ? `[ 0${i + 1} ]` : `0${i + 1}`;
+            });
+        });
+    </script>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const contents = document.querySelectorAll('.content');
+
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                boxes.forEach(b => b.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                box.classList.add('active');
+                const target = box.getAttribute('data-content');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+        lenis.on("scroll", (e) => {
+            console.log(e);
+        });
+    </script>
+
+    <script src="../Root JS/script.js"></script>
+
+    <script src="../Root JS/main.js"></script>
+
+    <script src="../Root JS/product.js"></script>
+
+</body>
+
+</html>
