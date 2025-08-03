@@ -35,7 +35,6 @@
 
   onAuthStateChanged(auth, (user) => {
     if (!user) {
-      // Redirect if not logged in
       window.location.href = '/auth.html';
     }
   });
